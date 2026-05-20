@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas Patriot Land Services | Built on Service. Powered by Texas.</title>
+<meta name="description" content="Veteran-owned land services in Texas. Brush hogging, pasture shredding, ranch maintenance, fence line clearing. Serving rural Texas with pride and precision.">
+<meta name="keywords" content="brush hogging Texas, pasture shredding, ranch maintenance, fence line clearing, veteran owned land services, tractor services Texas">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     DESIGN SYSTEM — TEXAS PATRIOT LAND SERVICES
+     Aesthetic: Cinematic Texas / Military-Grade Rugged / Warm Dusk
+  ============================================================ */
+
+  :root {
+    --burnt-orange: #C85A00;
+    --deep-orange: #E8720A;
+    --amber-glow: #F4A624;
+    --sunset-gold: #FFB347;
+    --matte-black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark-earth: #2C2318;
+    --steel: #3D3D3D;
+    --stone: #6B6B6B;
+    --dust: #B8A898;
+    --cream: #F5EFE6;
+    --white: #FAFAF8;
+    --flag-red: #B22234;
+    --army-green: #4A5240;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+
+    --section-pad: clamp(60px, 8vw, 120px);
+    --container: 1200px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--matte-black);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 48px);
+  }
+
+  /* ============================================================
+     SKIP LINK & ACCESSIBILITY
+  ============================================================ */
+  .skip-link {
+    position: absolute; top: -999px; left: 16px;
+    background: var(--burnt-orange); color: white;
+    padding: 8px 16px; border-radius: 4px; z-index: 9999;
+    font-family: var(--font-body);
+  }
+  .skip-link:focus { top: 16px; }
+
+  /* ============================================================
+     NAV
+  ============================================================ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.85) 100%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,90,0,0.25);
+    padding: 0 clamp(16px,4vw,48px);
+  }
+
+  .nav-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: 24px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--burnt-orange), var(--amber-glow));
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 2px 12px rgba(200,90,0,0.4);
+  }
+
+  .logo-text {
+    display: flex; flex-direction: column; line-height: 1;
+  }
+
+  .logo-text .name {
+    font-family: var(--font-display);
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--white);
+    letter-spacing: 0.05em;
+  }
+
+  .logo-text .sub {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    color: var(--burnt-orange);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 32px);
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dust);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--amber-glow); }
+
+  .nav-cta {
+    background: var(--burnt-orange);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: background 0.2s, transform 0.1s !important;
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover {
+    background: var(--deep-orange) !important;
+    color: white !important;
+    transform: translateY(-1px);
+  }
+
+  .nav-veteran-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-glow);
+    border: 1px solid rgba(244,166,36,0.3);
+    padding: 5px 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-veteran-badge { display: none; }
+  }
+
+  /* ============================================================
+     HERO — CINEMATIC TEXAS SUNSET
+  ============================================================ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: clamp(60px, 8vw, 100px);
+    overflow: hidden;
+  }
+
+  /* Sky gradient layers */
+  .hero-sky {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 30%, rgba(232,114,10,0.7) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 30% 50%, rgba(200,90,0,0.4) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 80% at 50% 0%, rgba(244,166,36,0.3) 0%, transparent 50%),
+      linear-gradient(180deg,
+        #0A0805 0%,
+        #1C1005 5%,
+        #2E1A00 12%,
+        #5C3000 22%,
+        #B85800 35%,
+        #E07010 48%,
+        #F09520 58%,
+        #D06020 68%,
+        #7A3010 78%,
+        #2A1A08 88%,
+        #0D0D0D 100%
+      );
+  }
+
+  /* Stars */
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 8%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 12%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 6%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 9%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 5%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 85% 11%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 18%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(2px 2px at 50% 4%, rgba(255,220,100,0.9) 0%, transparent 100%);
+    opacity: 0;
+    animation: starsReveal 3s ease 0.5s forwards;
+  }
+
+  @keyframes starsReveal {
+    to { opacity: 1; }
+  }
+
+  /* Horizon glow */
+  .hero-horizon {
+    position: absolute;
+    bottom: 18%;
+    left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--amber-glow) 30%, var(--deep-orange) 50%, var(--amber-glow) 70%, transparent 100%);
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+
+  /* Ground / land silhouette */
+  .hero-ground {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 22%;
+    background: linear-gradient(180deg, var(--dark-earth) 0%, #0D0D0D 100%);
+    clip-path: polygon(
+      0% 40%, 3% 35%, 6% 42%, 9% 30%, 12% 38%,
+      15% 25%, 18% 32%, 22% 20%, 26% 28%, 30% 18%,
+      34% 24%, 38% 15%, 42% 22%, 46% 18%, 50% 25%,
+      54% 16%, 58% 22%, 62% 14%, 66% 20%, 70% 15%,
+      74% 22%, 78% 18%, 82% 26%, 85% 20%, 88% 28%,
+      91% 22%, 94% 32%, 97% 25%, 100% 30%,
+      100% 100%, 0% 100%
+    );
+  }
+
+  /* Tractor silhouette SVG */
+  .hero-tractor {
+    position: absolute;
+    bottom: 17%;
+    right: clamp(40px, 8vw, 160px);
+    width: clamp(160px, 22vw, 340px);
+    opacity: 0;
+    animation: tractorRise 1.2s ease 0.8s forwards;
+    filter: drop-shadow(0 0 30px rgba(200,90,0,0.4));
+  }
+
+  @keyframes tractorRise {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Dust particles */
+  .dust-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(200,140,60,0.3);
+    animation: dustFloat linear infinite;
+  }
+
+  @keyframes dustFloat {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.4; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(-120px) translateX(40px) scale(0.3); opacity: 0; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(13,13,13,0.7);
+    border: 1px solid rgba(200,90,0,0.5);
+    border-radius: 3px;
+    padding: 7px 14px;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber-glow);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+
+  .hero-badge .star { color: var(--flag-red); font-size: 14px; }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 9vw, 130px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    text-shadow: 0 4px 40px rgba(0,0,0,0.8), 0 0 80px rgba(200,90,0,0.2);
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.5s forwards;
+  }
+
+  .hero-title .texas {
+    background: linear-gradient(135deg, var(--burnt-orange) 0%, var(--amber-glow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+
+  .hero-title .patriot {
+    display: block;
+    font-size: clamp(32px, 5vw, 76px);
+    letter-spacing: 0.15em;
+    color: var(--cream);
+  }
+
+  .hero-title .land-services {
+    display: block;
+    font-size: clamp(22px, 3.5vw, 52px);
+    letter-spacing: 0.3em;
+    color: var(--dust);
+    -webkit-text-fill-color: var(--dust);
+  }
+
+  .hero-slogan {
+    font-family: var(--font-heading);
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber-glow);
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.7s forwards;
+  }
+
+  .hero-slogan::before,
+  .hero-slogan::after {
+    content: '—';
+    margin: 0 12px;
+    color: var(--burnt-orange);
+    opacity: 0.6;
+  }
+
+  .hero-desc {
+    font-size: clamp(15px, 1.8vw, 18px);
+    color: var(--dust);
+    max-width: 520px;
+    margin-bottom: 44px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.85s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 1s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--burnt-orange);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(200,90,0,0.4);
+  }
+
+  .btn-primary:hover {
+    background: var(--deep-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(200,90,0,0.5);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--cream);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--amber-glow);
+    color: var(--amber-glow);
+    background: rgba(244,166,36,0.06);
+  }
+
+  /* Hero stats strip */
+  .hero-stats {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(13,13,13,0.92);
+    border-top: 1px solid rgba(200,90,0,0.3);
+    z-index: 3;
+    padding: 18px clamp(16px,4vw,48px);
+  }
+
+  .hero-stats-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 3vw, 36px);
+    color: var(--burnt-orange);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dust);
+    line-height: 1.3;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(200,90,0,0.3);
+  }
+
+  /* ============================================================
+     TRUST BAR
+  ============================================================ */
+  .trust-bar {
+    background: var(--charcoal);
+    border-bottom: 1px solid rgba(200,90,0,0.2);
+    padding: 20px 0;
+  }
+
+  .trust-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dust);
+  }
+
+  .trust-item .icon {
+    font-size: 18px;
+  }
+
+  .trust-item .highlight { color: var(--amber-glow); }
+
+  /* ============================================================
+     SECTION HEADERS
+  ============================================================ */
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--burnt-orange);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 72px);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+
+  .section-title .accent {
+    color: var(--burnt-orange);
+  }
+
+  .section-body {
+    font-size: clamp(15px, 1.6vw, 17px);
+    color: var(--dust);
+    line-height: 1.75;
+    max-width: 600px;
+  }
+
+  /* ============================================================
+     SERVICES SECTION
+  ============================================================ */
+  .services {
+    padding: var(--section-pad) 0;
+    background: var(--matte-black);
+    position: relative;
+  }
+
+  .services::before {
+    content: 'SERVICES';
+    position: absolute;
+    top: 40px;
+    right: clamp(16px,4vw,48px);
+    font-family: var(--font-display);
+    font-size: clamp(60px, 12vw, 180px);
+    color: rgba(255,255,255,0.02);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.05em;
+  }
+
+  .services-header {
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .service-card {
+    background: var(--charcoal);
+    padding: clamp(28px, 4vw, 44px);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: linear-gradient(180deg, var(--burnt-orange), var(--amber-glow));
+    transition: height 0.4s ease;
+  }
+
+  .service-card:hover { background: #222; }
+  .service-card:hover::before { height: 100%; }
+
+  .service-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--stone);
+    line-height: 1.65;
+  }
+
+  .service-card .service-detail {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .service-tag {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+    border: 1px solid rgba(200,90,0,0.3);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* ============================================================
+     WHY US / VETERAN SECTION
+  ============================================================ */
+  .why-us {
+    padding: var(--section-pad) 0;
+    background: linear-gradient(135deg, var(--dark-earth) 0%, #1A1008 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-us::after {
+    content: '★';
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+    font-size: 500px;
+    color: rgba(200,90,0,0.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .why-grid { grid-template-columns: 1fr; }
+  }
+
+  .veteran-badge-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(200,90,0,0.12);
+    border: 1.5px solid rgba(200,90,0,0.4);
+    border-radius: 4px;
+    padding: 20px 28px;
+    margin-bottom: 32px;
+  }
+
+  .veteran-badge-large .flag {
+    font-size: 40px;
+    flex-shrink: 0;
+  }
+
+  .veteran-badge-large .badge-text {
+    font-family: var(--font-heading);
+  }
+
+  .veteran-badge-large .badge-top {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+  }
+
+  .veteran-badge-large .badge-main {
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.06em;
+  }
+
+  .values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .values-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .values-list .v-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(200,90,0,0.15);
+    border: 1px solid rgba(200,90,0,0.3);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .values-list h4 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber-glow);
+    margin-bottom: 4px;
+  }
+
+  .values-list p {
+    font-size: 14px;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  .why-visual {
+    position: relative;
+  }
+
+  .quote-block {
+    background: rgba(13,13,13,0.8);
+    border-left: 4px solid var(--burnt-orange);
+    padding: 32px 36px;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+  }
+
+  .quote-block::before {
+    content: '"';
+    font-family: var(--font-display);
+    font-size: 120px;
+    color: var(--burnt-orange);
+    opacity: 0.15;
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    line-height: 1;
+  }
+
+  .quote-text {
+    font-family: var(--font-heading);
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.45;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-attr {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+  }
+
+  /* Metrics */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 32px;
+  }
+
+  .metric-box {
+    background: rgba(13,13,13,0.7);
+    border: 1px solid rgba(200,90,0,0.2);
+    padding: 20px 16px;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .metric-num {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 40px);
+    color: var(--burnt-orange);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .metric-label {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+    line-height: 1.3;
+  }
+
+  /* ============================================================
+     BOOKING SECTION
+  ============================================================ */
+  .booking {
+    padding: var(--section-pad) 0;
+    background: var(--matte-black);
+  }
+
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .booking-grid { grid-template-columns: 1fr; }
+  }
+
+  .booking-info h2 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 56px);
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--charcoal);
+    border-radius: 4px;
+    border: 1px solid rgba(200,90,0,0.15);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .contact-method:hover {
+    border-color: rgba(200,90,0,0.4);
+    background: #222;
+  }
+
+  .contact-method .cm-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .contact-method .cm-label {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .contact-method .cm-value {
+    font-family: var(--font-heading);
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+  }
+
+  /* Booking Form */
+  .booking-form {
+    background: var(--charcoal);
+    border: 1px solid rgba(200,90,0,0.2);
+    border-radius: 6px;
+    padding: clamp(24px, 4vw, 44px);
+  }
+
+  .form-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200,90,0,0.3);
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 7px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(13,13,13,0.8);
+    border: 1.5px solid rgba(100,100,100,0.3);
+    border-radius: 3px;
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--cream);
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--burnt-orange);
+    box-shadow: 0 0 0 3px rgba(200,90,0,0.12);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C85A00' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+
+  .form-group select option {
+    background: #1A1A1A;
+    color: var(--cream);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--burnt-orange), var(--deep-orange));
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+    box-shadow: 0 4px 16px rgba(200,90,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200,90,0,0.45);
+  }
+
+  /* ============================================================
+     SCALABILITY / GROWTH ROADMAP
+  ============================================================ */
+  .growth {
+    padding: var(--section-pad) 0;
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--matte-black) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .growth::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--burnt-orange), transparent);
+  }
+
+  .roadmap {
+    margin-top: clamp(40px, 5vw, 60px);
+    position: relative;
+  }
+
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--burnt-orange), rgba(200,90,0,0.1));
+  }
+
+  @media (max-width: 600px) {
+    .roadmap::before { left: 16px; }
+  }
+
+  .phase {
+    display: flex;
+    gap: clamp(20px, 4vw, 44px);
+    margin-bottom: clamp(32px, 4vw, 52px);
+    position: relative;
+    padding-left: clamp(20px, 4vw, 40px);
+  }
+
+  .phase-marker {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 44px;
+    height: 44px;
+    background: var(--matte-black);
+    border: 2px solid var(--burnt-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--burnt-orange);
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  .phase-content {
+    padding-left: clamp(44px, 6vw, 60px);
+    flex: 1;
+  }
+
+  .phase-tag {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+    margin-bottom: 6px;
+  }
+
+  .phase-title {
+    font-family: var(--font-heading);
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .phase-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .phase-item {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--stone);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 5px 12px;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+  }
+
+  /* ============================================================
+     BUSINESS CREDIT / FUNDABILITY SECTION
+  ============================================================ */
+  .credit {
+    padding: var(--section-pad) 0;
+    background: var(--matte-black);
+  }
+
+  .credit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2px;
+    margin-top: clamp(36px, 5vw, 56px);
+  }
+
+  .credit-card {
+    background: var(--charcoal);
+    padding: clamp(24px, 3vw, 36px);
+    position: relative;
+    border-top: 3px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .credit-card:hover {
+    border-color: var(--burnt-orange);
+  }
+
+  .credit-step {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: rgba(200,90,0,0.15);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .credit-card h4 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-glow);
+    margin-bottom: 10px;
+  }
+
+  .credit-card p {
+    font-size: 13px;
+    color: var(--stone);
+    line-height: 1.65;
+  }
+
+  .credit-card .credit-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .credit-tag {
+    font-family: var(--font-heading);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--army-green);
+    background: rgba(74,82,64,0.2);
+    border: 1px solid rgba(74,82,64,0.4);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* ============================================================
+     SEO / SOCIAL STRATEGY
+  ============================================================ */
+  .strategy {
+    padding: var(--section-pad) 0;
+    background: var(--dark-earth);
+  }
+
+  .strategy-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: clamp(36px, 5vw, 56px);
+  }
+
+  .strategy-col {
+    background: rgba(13,13,13,0.6);
+    border: 1px solid rgba(200,90,0,0.15);
+    border-radius: 4px;
+    padding: clamp(20px, 3vw, 32px);
+  }
+
+  .strategy-col-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(200,90,0,0.2);
+  }
+
+  .strategy-col-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+
+  .strategy-col h3 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  .strategy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .strategy-list li {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+
+  .strategy-list li::before {
+    content: '→';
+    color: var(--burnt-orange);
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+
+  /* ============================================================
+     TESTIMONIALS
+  ============================================================ */
+  .testimonials {
+    padding: var(--section-pad) 0;
+    background: var(--matte-black);
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: clamp(36px, 5vw, 56px);
+  }
+
+  .testimonial-card {
+    background: var(--charcoal);
+    border-radius: 4px;
+    padding: clamp(20px, 3vw, 32px);
+    position: relative;
+    border-bottom: 3px solid var(--burnt-orange);
+  }
+
+  .stars-row {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 14px;
+  }
+
+  .stars-row span {
+    color: var(--amber-glow);
+    font-size: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    color: var(--dust);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--burnt-orange), var(--amber-glow));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .author-info .author-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.06em;
+  }
+
+  .author-info .author-loc {
+    font-size: 11px;
+    color: var(--stone);
+    letter-spacing: 0.06em;
+  }
+
+  /* ============================================================
+     CTA BANNER
+  ============================================================ */
+  .cta-banner {
+    padding: var(--section-pad) 0;
+    background: linear-gradient(135deg, #1C0E00 0%, #2E1A00 40%, #1A0800 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, rgba(200,90,0,0.2) 0%, transparent 70%);
+  }
+
+  .cta-banner > .container { position: relative; z-index: 1; }
+
+  .cta-banner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 7vw, 100px);
+    color: var(--white);
+    line-height: 0.95;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .cta-banner h2 span { color: var(--burnt-orange); }
+
+  .cta-banner p {
+    font-size: clamp(15px, 1.8vw, 18px);
+    color: var(--dust);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .phone-cta {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 52px);
+    color: var(--amber-glow);
+    letter-spacing: 0.04em;
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .phone-cta:hover { color: var(--white); }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  footer {
+    background: #070707;
+    border-top: 1px solid rgba(200,90,0,0.2);
+    padding: clamp(40px, 6vw, 80px) 0 32px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    color: var(--stone);
+    line-height: 1.7;
+    margin-top: 16px;
+    max-width: 260px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--burnt-orange);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 13px;
+    color: var(--stone);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-col ul li a:hover { color: var(--amber-glow); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: var(--steel);
+    letter-spacing: 0.06em;
+  }
+
+  .footer-bottom .badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .footer-badge {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+    border: 1px solid rgba(100,100,100,0.3);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ============================================================
+     STICKY MOBILE CTA
+  ============================================================ */
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: var(--burnt-orange);
+    padding: 14px 20px;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 640px) {
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 64px; }
+  }
+
+  .mobile-cta-bar a {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .mobile-cta-bar a:first-child {
+    background: rgba(0,0,0,0.25);
+  }
+
+  /* ============================================================
+     LOGO SECTION
+  ============================================================ */
+  .logo-showcase {
+    padding: var(--section-pad) 0;
+    background: var(--charcoal);
+  }
+
+  .logo-concepts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: clamp(36px,5vw,56px);
+  }
+
+  .logo-concept {
+    background: var(--matte-black);
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid rgba(200,90,0,0.15);
+  }
+
+  .logo-concept .logo-preview {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .logo-v1 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    line-height: 1;
+    text-align: left;
+    border-left: 4px solid var(--burnt-orange);
+    padding-left: 12px;
+  }
+
+  .logo-v1 span { color: var(--burnt-orange); display: block; }
+  .logo-v1 small {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--stone);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .logo-v2 {
+    text-align: center;
+  }
+
+  .logo-v2 .star-emblem {
+    font-size: 48px;
+    margin-bottom: 6px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(200,90,0,0.5));
+  }
+
+  .logo-v2 .company-name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    display: block;
+  }
+
+  .logo-v2 .company-sub {
+    font-family: var(--font-heading);
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--burnt-orange);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .logo-v3 {
+    background: linear-gradient(135deg, var(--burnt-orange), var(--amber-glow));
+    padding: 16px 24px;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .logo-v3 .top-line {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.85);
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .logo-v3 .main-name {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: white;
+    letter-spacing: 0.06em;
+    display: block;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+
+  .logo-v3 .tag-line {
+    font-family: var(--font-heading);
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .logo-concept-label {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 6px;
+  }
+
+  .logo-concept-desc {
+    font-size: 12px;
+    color: var(--steel);
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     COLOR PALETTE SHOWCASE
+  ============================================================ */
+  .palette {
+    display: flex;
+    gap: 4px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    flex: 1;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .swatch-label {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--stone);
+    white-space: nowrap;
+  }
+
+  /* ============================================================
+     UTILS
+  ============================================================ */
+  .mt-auto { margin-top: auto; }
+  .text-center { text-align: center; }
+  .text-orange { color: var(--burnt-orange); }
+  .text-gold { color: var(--amber-glow); }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200,90,0,0.4), transparent);
+    margin: 0;
+  }
+
+  /* Scroll animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============================================================
+     PRINT
+  ============================================================ */
+  @media print {
+    nav, .mobile-cta-bar, .hero-tractor { display: none; }
+    .hero { min-height: auto; padding-top: 32px; }
+    body { background: white; color: black; }
+  }
+
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Texas Patriot Land Services Home">
+      <div class="logo-icon">🤠</div>
+      <div class="logo-text">
+        <span class="name">TEXAS PATRIOT</span>
+        <span class="sub">Land Services</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#growth">Growth</a></li>
+      <li><a href="#booking">Contact</a></li>
+      <li><a href="tel:(210)849-3350" class="nav-cta">📞 Call Now</a></li>
+    </ul>
+
+    <div class="nav-veteran-badge">⭐ Veteran-Owned</div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<main id="main">
+<section class="hero" aria-label="Hero">
+
+  <div class="hero-sky" aria-hidden="true"></div>
+  <div class="hero-stars" aria-hidden="true"></div>
+  <div class="hero-horizon" aria-hidden="true"></div>
+
+  <!-- Dust particles -->
+  <div class="dust-particle" style="width:6px;height:6px;bottom:18%;right:35%;animation-duration:4s;animation-delay:0s;" aria-hidden="true"></div>
+  <div class="dust-particle" style="width:4px;height:4px;bottom:19%;right:30%;animation-duration:6s;animation-delay:1.5s;" aria-hidden="true"></div>
+  <div class="dust-particle" style="width:8px;height:8px;bottom:17%;right:40%;animation-duration:5s;animation-delay:0.8s;" aria-hidden="true"></div>
+  <div class="dust-particle" style="width:3px;height:3px;bottom:20%;right:25%;animation-duration:7s;animation-delay:2s;" aria-hidden="true"></div>
+
+  <!-- SVG Tractor Silhouette -->
+  <svg class="hero-tractor" aria-hidden="true" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Large rear wheel -->
+    <circle cx="100" cy="150" r="60" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
+    <circle cx="100" cy="150" r="45" fill="none" stroke="#1A0E00" stroke-width="2"/>
+    <circle cx="100" cy="150" r="12" fill="#1A0E00"/>
+    <!-- Wheel spokes -->
+    <line x1="100" y1="90" x2="100" y2="110" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="100" y1="190" x2="100" y2="210" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="150" x2="60" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="140" y1="150" x2="160" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="58" y1="108" x2="73" y2="123" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="127" y1="177" x2="142" y2="192" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="58" y1="192" x2="73" y2="177" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="127" y1="123" x2="142" y2="108" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Small front wheel -->
+    <circle cx="265" cy="163" r="28" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
+    <circle cx="265" cy="163" r="20" fill="none" stroke="#1A0E00" stroke-width="1.5"/>
+    <circle cx="265" cy="163" r="7" fill="#1A0E00"/>
+    <!-- Body -->
+    <path d="M160 150 L160 90 L220 80 L260 85 L270 130 L160 150Z" fill="#0D0D0D"/>
+    <!-- Hood -->
+    <path d="M160 110 L220 95 L260 100 L260 130 L160 130Z" fill="#1A0E00"/>
+    <!-- Engine grill lines -->
+    <line x1="175" y1="100" x2="175" y2="128" stroke="#2C1800" stroke-width="2"/>
+    <line x1="190" y1="97" x2="190" y2="127" stroke="#2C1800" stroke-width="2"/>
+    <line x1="205" y1="95" x2="205" y2="126" stroke="#2C1800" stroke-width="2"/>
+    <!-- Exhaust stack -->
+    <rect x="218" y="65" width="8" height="30" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="1.5"/>
+    <!-- Cab -->
+    <rect x="130" y="85" width="70" height="65" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
+    <!-- Cab window -->
+    <rect x="140" y="93" width="50" height="35" rx="2" fill="rgba(180,100,0,0.15)" stroke="#2C1800" stroke-width="1"/>
+    <!-- ROPS bar -->
+    <path d="M130 85 L130 55 L200 55 L200 85" fill="none" stroke="#2C1800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Ground shadow / dust -->
+    <ellipse cx="180" cy="196" rx="100" ry="8" fill="rgba(200,90,0,0.12)"/>
+    <!-- Brush hog attachment -->
+    <rect x="60" y="160" width="100" height="20" rx="2" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
+    <line x1="80" y1="160" x2="80" y2="180" stroke="#2C1800" stroke-width="1.5"/>
+    <line x1="100" y1="160" x2="100" y2="180" stroke="#2C1800" stroke-width="1.5"/>
+    <line x1="120" y1="160" x2="120" y2="180" stroke="#2C1800" stroke-width="1.5"/>
+    <line x1="140" y1="160" x2="140" y2="180" stroke="#2C1800" stroke-width="1.5"/>
+    <!-- Smoke puffs -->
+    <circle cx="222" cy="56" r="6" fill="rgba(200,140,80,0.2)"/>
+    <circle cx="218" cy="44" r="8" fill="rgba(200,140,80,0.15)"/>
+    <circle cx="225" cy="33" r="5" fill="rgba(200,140,80,0.1)"/>
+  </svg>
+
+  <div class="hero-ground" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="star">★</span>
+        Veteran-Owned &amp; Operated · Texas Proud
+      </div>
+
+      <h1 class="hero-title">
+        <span class="texas">Texas</span>
+        <span class="patriot">Patriot</span>
+        <span class="land-services">Land Services</span>
+      </h1>
+
+      <p class="hero-slogan">Built on Service. Powered by Texas.</p>
+
+      <p class="hero-desc">
+        From overgrown pastures to pristine ranch land — we show up, work hard,
+        and deliver results. Serving rural Texas with the discipline and integrity
+        of those who served our nation.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#booking" class="btn-primary">
+          📞 Get a Free Quote
+        </a>
+        <a href="#services" class="btn-secondary">
+          View Our Services →
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stats strip -->
+  <div class="hero-stats" role="region" aria-label="Company highlights">
+    <div class="hero-stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Veteran<br>Owned</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">TX</span>
+        <span class="stat-label">Licensed &amp;<br>Insured</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">24h</span>
+        <span class="stat-label">Quote<br>Turnaround</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">★ 5.0</span>
+        <span class="stat-label">Customer<br>Rating</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+============================================================ -->
+<div class="trust-bar" role="region" aria-label="Trust signals">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <span class="icon">🇺🇸</span>
+        <span>US <span class="highlight">Army Veteran</span></span>
+      </div>
+      <div class="trust-item">
+        <span class="icon">🛡️</span>
+        <span><span class="highlight">Fully Insured</span> Operation</span>
+      </div>
+      <div class="trust-item">
+        <span class="icon">📋</span>
+        <span><span class="highlight">SAM.gov</span> Registered</span>
+      </div>
+      <div class="trust-item">
+        <span class="icon">⚙️</span>
+        <span>Professional <span class="highlight">Equipment</span></span>
+      </div>
+      <div class="trust-item">
+        <span class="icon">🤝</span>
+        <span><span class="highlight">No-Hassle</span> Quotes</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section id="services" class="services" aria-labelledby="services-heading">
+  <div class="container">
+
+    <header class="services-header reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title" id="services-heading">
+        Land Services<br><span class="accent">Done Right</span>
+      </h2>
+      <p class="section-body">
+        We bring military precision and Texas toughness to every job. Whether you need
+        a single pasture shredded or an ongoing ranch management contract, Texas Patriot
+        Land Services delivers consistent, quality work — on time and on budget.
+      </p>
+    </header>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🌾</span>
+        <h3>Brush Hogging</h3>
+        <p>Heavy-duty rotary cutting of overgrown vegetation, thick brush, and unwanted scrub. We clear what others won't tackle. Flat terrain to rough country.</p>
+        <div class="service-detail">
+          <span class="service-tag">1–500+ Acres</span>
+          <span class="service-tag">Heavy Brush</span>
+          <span class="service-tag">Same-Week Service</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🚜</span>
+        <h3>Pasture Shredding</h3>
+        <p>Keep your grazing land healthy and productive. Shredding controls weeds, manages growth stages, and maintains optimal forage conditions for livestock.</p>
+        <div class="service-detail">
+          <span class="service-tag">Routine Contracts</span>
+          <span class="service-tag">Weed Control</span>
+          <span class="service-tag">Livestock Ready</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🏡</span>
+        <h3>Ranch Maintenance</h3>
+        <p>Full-service property upkeep for working ranches, hunting properties, and rural estates. From mowing schedules to seasonal prep — we handle it all.</p>
+        <div class="service-detail">
+          <span class="service-tag">Monthly Plans</span>
+          <span class="service-tag">Annual Contracts</span>
+          <span class="service-tag">Full Property</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🌳</span>
+        <h3>Fence Line Clearing</h3>
+        <p>Restore and maintain your property boundaries. We clear encroaching brush and vegetation from fence lines so your barriers stay visible, functional, and legal.</p>
+        <div class="service-detail">
+          <span class="service-tag">All Fence Types</span>
+          <span class="service-tag">Property Lines</span>
+          <span class="service-tag">ROW Clearing</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">📐</span>
+        <h3>Small Acreage Management</h3>
+        <p>Perfect for homesteads, hobby farms, and rural residential lots. Targeted land management that keeps small properties looking clean and maintained.</p>
+        <div class="service-detail">
+          <span class="service-tag">1–25 Acres</span>
+          <span class="service-tag">Homestead Friendly</span>
+          <span class="service-tag">Flexible Scheduling</span>
+        </div>
+      </article>
+
+      <article class="service-card reveal" style="background: linear-gradient(135deg, rgba(200,90,0,0.12), rgba(26,26,26,1));">
+        <span class="service-icon" aria-hidden="true">📈</span>
+        <h3>Expanding Services</h3>
+        <p>Growing to serve county contracts, disaster cleanup, agricultural support, and government subcontracting. Ask about upcoming capabilities and preferred vendor registration.</p>
+        <div class="service-detail">
+          <span class="service-tag">County Contracts</span>
+          <span class="service-tag">Disaster Cleanup</span>
+          <span class="service-tag">Ag Support</span>
+          <span class="service-tag">Gov. Sub</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     WHY US / VETERAN SECTION
+============================================================ -->
+<section id="about" class="why-us" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="why-grid">
+
+      <div class="reveal">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title" id="about-heading">
+          Service Is<br><span class="accent">In Our DNA</span>
+        </h2>
+
+        <div class="veteran-badge-large">
+          <span class="flag" aria-hidden="true">🇺🇸</span>
+          <div class="badge-text">
+            <span class="badge-top">Proudly Veteran-Owned</span>
+            <span class="badge-main">US Military Veteran · Texas LLC</span>
+          </div>
+        </div>
+
+        <p class="section-body">
+          We served our country with honor. Now we serve Texas landowners with that same
+          commitment — showing up on time, doing the work right, and standing behind
+          every job we complete. No shortcuts. No excuses.
+        </p>
+
+        <ul class="values-list">
+          <li>
+            <div class="v-icon" aria-hidden="true">🎯</div>
+            <div>
+              <h4>Mission Focus</h4>
+              <p>Every job is a mission. We assess, plan, execute, and deliver with precision that comes from military discipline.</p>
+            </div>
+          </li>
+          <li>
+            <div class="v-icon" aria-hidden="true">🤝</div>
+            <div>
+              <h4>Your Word Is Your Bond</h4>
+              <p>We quote honestly, show up when we say we will, and communicate transparently about every aspect of your project.</p>
+            </div>
+          </li>
+          <li>
+            <div class="v-icon" aria-hidden="true">⚙️</div>
+            <div>
+              <h4>Professional Equipment</h4>
+              <p>Commercial-grade tractors and implements, properly maintained, properly insured. We come ready to work.</p>
+            </div>
+          </li>
+          <li>
+            <div class="v-icon" aria-hidden="true">📍</div>
+            <div>
+              <h4>Texas Through and Through</h4>
+              <p>Local knowledge, local investment. We understand Texas land, Texas weather, and Texas landowner expectations.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="why-visual reveal">
+        <div class="quote-block">
+          <p class="quote-text">
+            "The discipline we carried in uniform, we carry into every field we work.
+            Your land deserves the same respect we gave our post."
+          </p>
+          <p class="quote-attr">— Owner, Texas Patriot Land Services · U.S. Army Veteran</p>
+        </div>
+
+        <div class="metrics-row">
+          <div class="metric-box">
+            <div class="metric-num">100%</div>
+            <div class="metric-label">Job<br>Completion Rate</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-num">24h</div>
+            <div class="metric-label">Quote<br>Response</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-num">$2M+</div>
+            <div class="metric-label">Liability<br>Coverage</div>
+          </div>
+        </div>
+
+        <!-- Color Palette -->
+        <div style="margin-top: 32px;">
+          <div style="font-family: var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--stone); margin-bottom:52px;">Brand Color System</div>
+          <div class="palette" role="list" aria-label="Brand colors">
+            <div class="swatch" style="background:#C85A00;" role="listitem">
+              <span class="swatch-label">Burnt Orange</span>
+            </div>
+            <div class="swatch" style="background:#E8720A;" role="listitem">
+              <span class="swatch-label">Deep Orange</span>
+            </div>
+            <div class="swatch" style="background:#F4A624;" role="listitem">
+              <span class="swatch-label">Amber Glow</span>
+            </div>
+            <div class="swatch" style="background:#0D0D0D;" role="listitem" aria-label="Matte Black">
+              <span class="swatch-label" style="color:#555">Matte Black</span>
+            </div>
+            <div class="swatch" style="background:#2C2318;" role="listitem">
+              <span class="swatch-label">Dark Earth</span>
+            </div>
+            <div class="swatch" style="background:#4A5240;" role="listitem">
+              <span class="swatch-label">Army Green</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOGO CONCEPTS
+============================================================ -->
+<section class="logo-showcase" aria-labelledby="logo-heading">
+  <div class="container">
+    <div class="section-label reveal">Brand Identity</div>
+    <h2 class="section-title reveal" id="logo-heading">
+      Logo <span class="accent">Concepts</span>
+    </h2>
+
+    <div class="logo-concepts">
+
+      <div class="logo-concept reveal">
+        <div class="logo-preview">
+          <div class="logo-v1">
+            TEXAS<span>PATRIOT</span>
+            <small>LAND SERVICES · EST. 2024</small>
+          </div>
+        </div>
+        <div class="logo-concept-label">Concept A — Edge &amp; Authority</div>
+        <div class="logo-concept-desc">Bold vertical rule with stacked wordmark. Strong, readable, masculine. Works on truck doors, business cards, and website headers.</div>
+      </div>
+
+      <div class="logo-concept reveal">
+        <div class="logo-preview">
+          <div class="logo-v2">
+            <span class="star-emblem">⭐</span>
+            <span class="company-name">TEXAS PATRIOT</span>
+            <span class="company-sub">Land Services · Veteran Owned</span>
+          </div>
+        </div>
+        <div class="logo-concept-label">Concept B — Star &amp; Pride</div>
+        <div class="logo-concept-desc">Centered star emblem with clean type below. Evokes Texas flag, veteran pride, and approachable authority. Ideal for embroidery and signage.</div>
+      </div>
+
+      <div class="logo-concept reveal">
+        <div class="logo-preview">
+          <div class="logo-v3">
+            <span class="top-line">Built on Service · Powered by Texas</span>
+            <span class="main-name">TX PATRIOT</span>
+            <span class="tag-line">Land Services · Veteran Owned &amp; Operated</span>
+          </div>
+        </div>
+        <div class="logo-concept-label">Concept C — Warm Field Badge</div>
+        <div class="logo-concept-desc">Full badge format on brand gradient. High-visibility for equipment decals, yard signs, and social media profile images.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GROWTH ROADMAP
+============================================================ -->
+<section id="growth" class="growth" aria-labelledby="growth-heading">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Scalability Plan</div>
+      <h2 class="section-title" id="growth-heading">
+        Built to<br><span class="accent">Grow</span>
+      </h2>
+      <p class="section-body">
+        Texas Patriot Land Services is structured from day one for long-term scalability —
+        from a single tractor operation to a multi-crew fleet holding government and county
+        contracts across Texas.
+      </p>
+    </div>
+
+    <div class="roadmap" role="list">
+
+      <div class="phase reveal" role="listitem">
+        <div class="phase-marker" aria-hidden="true">1</div>
+        <div class="phase-content">
+          <div class="phase-tag">Months 1–6 · Foundation</div>
+          <div class="phase-title">Launch &amp; Local Domination</div>
+          <div class="phase-items">
+            <span class="phase-item">LLC Formation</span>
+            <span class="phase-item">EIN + Business Banking</span>
+            <span class="phase-item">DUNS / UEI Registration</span>
+            <span class="phase-item">Google Business Profile</span>
+            <span class="phase-item">First 3 Net-30 Vendors</span>
+            <span class="phase-item">Local Facebook Groups</span>
+            <span class="phase-item">First 10 Clients</span>
+            <span class="phase-item">Liability Insurance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase reveal" role="listitem">
+        <div class="phase-marker" aria-hidden="true">2</div>
+        <div class="phase-content">
+          <div class="phase-tag">Months 6–18 · Credit &amp; Contracts</div>
+          <div class="phase-title">Build Credit &amp; Win Contracts</div>
+          <div class="phase-items">
+            <span class="phase-item">SAM.gov Registration</span>
+            <span class="phase-item">SDVOSB Certification</span>
+            <span class="phase-item">5–8 Net-30 Vendor Accounts</span>
+            <span class="phase-item">Business Credit Card</span>
+            <span class="phase-item">Equipment LOC Application</span>
+            <span class="phase-item">County HOA Contracts</span>
+            <span class="phase-item">Subcontractor Relationships</span>
+            <span class="phase-item">2nd Machine / Employee</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase reveal" role="listitem">
+        <div class="phase-marker" aria-hidden="true">3</div>
+        <div class="phase-content">
+          <div class="phase-tag">Year 2–3 · Fleet Expansion</div>
+          <div class="phase-title">Fleet Growth &amp; Government Bids</div>
+          <div class="phase-items">
+            <span class="phase-item">3-Machine Fleet</span>
+            <span class="phase-item">Crew Foreman Hire</span>
+            <span class="phase-item">TxDOT ROW Bids</span>
+            <span class="phase-item">FEMA Disaster Roster</span>
+            <span class="phase-item">County Mowing Contracts</span>
+            <span class="phase-item">Commercial Line of Credit</span>
+            <span class="phase-item">QuickBooks + Invoicing System</span>
+            <span class="phase-item">Branded Truck Fleet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase reveal" role="listitem">
+        <div class="phase-marker" aria-hidden="true">4</div>
+        <div class="phase-content">
+          <div class="phase-tag">Year 3–5 · Market Leader</div>
+          <div class="phase-title">Multi-County Market Leader</div>
+          <div class="phase-items">
+            <span class="phase-item">5+ Machine Fleet</span>
+            <span class="phase-item">Multiple County Contracts</span>
+            <span class="phase-item">Federal 8(a) Exploration</span>
+            <span class="phase-item">Ag Support Division</span>
+            <span class="phase-item">Disaster Cleanup Division</span>
+            <span class="phase-item">Equipment Financing Brokerage</span>
+            <span class="phase-item">Franchise / Licensing Model</span>
+            <span class="phase-item">$1M+ Annual Revenue</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BUSINESS CREDIT PLAN
+============================================================ -->
+<section class="credit" aria-labelledby="credit-heading">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Business Fundability</div>
+      <h2 class="section-title" id="credit-heading">
+        Credit Building<br><span class="accent">Roadmap</span>
+      </h2>
+      <p class="section-body">
+        A properly structured business credit profile unlocks equipment financing, government
+        contracts, and commercial lending — critical for scaling from a single-tractor operation
+        to a multi-crew fleet. Here is the step-by-step plan.
+      </p>
+    </div>
+
+    <div class="credit-grid">
+
+      <div class="credit-card reveal">
+        <div class="credit-step">01</div>
+        <h4>LLC Formation</h4>
+        <p>File Texas LLC through the Secretary of State. Use the business name exactly as branded. Obtain a registered agent. Keep personal and business assets legally separated from day one.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">Texas SOS</span>
+          <span class="credit-tag">$300 Filing</span>
+          <span class="credit-tag">Registered Agent</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">02</div>
+        <h4>EIN Setup</h4>
+        <p>Apply for an Employer Identification Number (EIN) through the IRS immediately after LLC approval. This is your business's Social Security Number — used for all banking, credit, and tax purposes.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">IRS.gov (Free)</span>
+          <span class="credit-tag">Same Day Online</span>
+          <span class="credit-tag">Required for Banking</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">03</div>
+        <h4>Business Banking</h4>
+        <p>Open a dedicated business checking account under the LLC name and EIN. Use a local Texas bank or credit union when possible. Never comingle personal and business funds. Aim for 90 days of average daily balance before applying for credit.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">Texas Bank / CU</span>
+          <span class="credit-tag">Separate Account</span>
+          <span class="credit-tag">90-Day Season</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">04</div>
+        <h4>DUNS / UEI Number</h4>
+        <p>Register for a Unique Entity Identifier (UEI) through SAM.gov — this replaced the DUNS number for federal contracting. Required for all government work. Free registration, process takes 1–2 weeks.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">SAM.gov (Free)</span>
+          <span class="credit-tag">Federal Contracts</span>
+          <span class="credit-tag">Annual Renewal</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">05</div>
+        <h4>SAM.gov Registration</h4>
+        <p>Complete full System for Award Management (SAM.gov) registration — required for all federal contracts, grants, and subcontracting. Include NAICS codes: 115310 (Support Activities for Forestry), 561730 (Landscaping), 238910 (Site Preparation).</p>
+        <div class="credit-tags">
+          <span class="credit-tag">NAICS 115310</span>
+          <span class="credit-tag">NAICS 561730</span>
+          <span class="credit-tag">SDVOSB Flag</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">06</div>
+        <h4>Net-30 Vendor Accounts</h4>
+        <p>Open 3–5 Net-30 trade accounts immediately. These report to Dun &amp; Bradstreet and build your Paydex score. Start with: Uline, Grainger, HD Supply, Quill, Sunbelt Rentals. Pay early — always before the due date.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">Uline</span>
+          <span class="credit-tag">Grainger</span>
+          <span class="credit-tag">Quill</span>
+          <span class="credit-tag">HD Supply</span>
+          <span class="credit-tag">Sunbelt</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">07</div>
+        <h4>Vendor Tradelines</h4>
+        <p>After 90 days of Net-30 activity, apply for a business credit card (Ramp, Brex, or Capital One Spark). Use for fuel, supplies, and equipment — never personal expenses. Keep utilization under 30% and pay in full monthly.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">Ramp / Brex</span>
+          <span class="credit-tag">&lt;30% Utilization</span>
+          <span class="credit-tag">Pay In Full</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">08</div>
+        <h4>Equipment Financing</h4>
+        <p>After 6+ months of business banking history and a Paydex score of 80+, approach equipment lenders. Farm Credit, AgDirect, and Kubota Credit offer favorable terms for agricultural equipment. Seller-financed used equipment is also a strong early option.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">Farm Credit</span>
+          <span class="credit-tag">AgDirect</span>
+          <span class="credit-tag">Kubota Credit</span>
+          <span class="credit-tag">Paydex 80+</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">09</div>
+        <h4>SDVOSB Certification</h4>
+        <p>Apply for Service-Disabled Veteran-Owned Small Business (SDVOSB) or Veteran-Owned Small Business (VOSB) certification through the VA's SBA Vet Cert program. Opens set-aside federal contracts specifically designated for veteran-owned companies.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">VA SBA VetCert</span>
+          <span class="credit-tag">Set-Aside Contracts</span>
+          <span class="credit-tag">SDVOSB / VOSB</span>
+        </div>
+      </div>
+
+      <div class="credit-card reveal">
+        <div class="credit-step">10</div>
+        <h4>Commercial Fundability</h4>
+        <p>By month 18–24, you should have: D&amp;B Paydex 80+, Experian Intelliscore 70+, 2 years tax returns, documented revenue, and a bankable P&amp;L. This profile qualifies for SBA 7(a) loans, equipment lines of credit, and commercial real estate deposits.</p>
+        <div class="credit-tags">
+          <span class="credit-tag">SBA 7(a)</span>
+          <span class="credit-tag">Paydex 80+</span>
+          <span class="credit-tag">Equipment LOC</span>
+          <span class="credit-tag">2-Yr Tax Returns</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEO + SOCIAL STRATEGY
+============================================================ -->
+<section class="strategy" aria-labelledby="strategy-heading">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">Go-To-Market</div>
+      <h2 class="section-title" id="strategy-heading">
+        Growth<br><span class="accent">Strategy</span>
+      </h2>
+    </div>
+
+    <div class="strategy-cols">
+
+      <div class="strategy-col reveal">
+        <div class="strategy-col-header">
+          <span class="strategy-col-icon" aria-hidden="true">🔍</span>
+          <h3>Local SEO</h3>
+        </div>
+        <ul class="strategy-list" role="list">
+          <li>Claim and fully optimize Google Business Profile with photos, services, and weekly posts</li>
+          <li>Target keywords: "brush hogging [county name] TX", "tractor service near me", "pasture clearing Texas"</li>
+          <li>Build local citations on Yelp, Angi, Thumbtack, and Texas agricultural directories</li>
+          <li>Create county-specific landing pages (e.g., /brush-hogging-travis-county)</li>
+          <li>Collect 5-star Google reviews from every satisfied customer — use QR card handout</li>
+          <li>Submit to veteran business directories and Texas Chamber directories</li>
+          <li>Optimize for "veteran owned land services [city] Texas" voice searches</li>
+          <li>Post before/after job photos consistently — Google loves fresh media</li>
+        </ul>
+      </div>
+
+      <div class="strategy-col reveal">
+        <div class="strategy-col-header">
+          <span class="strategy-col-icon" aria-hidden="true">📱</span>
+          <h3>Social Media</h3>
+        </div>
+        <ul class="strategy-list" role="list">
+          <li>Facebook: Primary channel — join and serve 10+ local rural Texas Facebook Groups</li>
+          <li>Instagram: Cinematic before/after reels, tractor silhouette content, sunset job site shots</li>
+          <li>TikTok: "Day in the life" tractor operator content — massive organic reach in rural niches</li>
+          <li>Post 3–4x per week: job progress, completed work, team moments, equipment shots</li>
+          <li>Use hashtags: #TexasLandServices #BrushHogging #VeteranOwned #RanchLife #TexasFarmer</li>
+          <li>Run $5/day Facebook zip-code-targeted ads to landowners in service area</li>
+          <li>Share veteran stories and community involvement — builds deep brand loyalty</li>
+          <li>Partner with rural real estate agents for referral content partnerships</li>
+        </ul>
+      </div>
+
+      <div class="strategy-col reveal">
+        <div class="strategy-col-header">
+          <span class="strategy-col-icon" aria-hidden="true">🤝</span>
+          <h3>Trust Building</h3>
+        </div>
+        <ul class="strategy-list" role="list">
+          <li>Provide written quotes within 24 hours — every time, no exceptions</li>
+          <li>Send job completion photos via text to every customer, same day</li>
+          <li>Carry and display liability certificate — share digital copy on request</li>
+          <li>Create a customer loyalty program: 10th visit = free service add-on</li>
+          <li>Send handwritten thank-you cards after first jobs — deeply memorable</li>
+          <li>Offer a satisfaction guarantee: "Not happy? We come back free."</li>
+          <li>Display veteran credentials prominently on vehicles, website, and uniforms</li>
+          <li>Ask for referrals actively — offer $25–$50 referral credit per new customer</li>
+        </ul>
+      </div>
+
+      <div class="strategy-col reveal">
+        <div class="strategy-col-header">
+          <span class="strategy-col-icon" aria-hidden="true">📅</span>
+          <h3>Booking System</h3>
+        </div>
+        <ul class="strategy-list" role="list">
+          <li>Phase 1: Google Form + Calendly for quote requests — zero cost, immediate deployment</li>
+          <li>Phase 2: Jobber or Housecall Pro for scheduling, invoicing, and customer management</li>
+          <li>Offer 3 booking methods: online form, phone call, and Facebook Messenger</li>
+          <li>Send automated SMS confirmations and day-before reminders</li>
+          <li>Use Stripe or Square for deposits — 25% deposit secures the booking</li>
+          <li>Create service area map on Google Maps — embed on website contact page</li>
+          <li>Phase 3: Custom quote calculator on website for instant ballpark pricing</li>
+          <li>Follow up with every unbooked quote after 3 days — 30% conversion rate boost</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+
+    <div class="reveal">
+      <div class="section-label">What Clients Say</div>
+      <h2 class="section-title" id="testimonials-heading">
+        Texas Tough<br><span class="accent">Reputation</span>
+      </h2>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <article class="testimonial-card reveal">
+        <div class="stars-row" aria-label="5 out of 5 stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">
+          "These guys showed up exactly when they said they would, cleared 60 acres of cedar and mesquite in two days flat, and left the place looking incredible. Veteran-owned and it shows — professional, reliable, and took pride in the work."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">R</div>
+          <div class="author-info">
+            <div class="author-name">Randy B.</div>
+            <div class="author-loc">Bastrop County, TX · Ranch Owner</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal">
+        <div class="stars-row" aria-label="5 out of 5 stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">
+          "I've tried three other services in the county. None of them come close. Texas Patriot quoted me fairly, finished on time, sent photos when done, and followed up the next week. I gave them an annual contract on the spot."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">L</div>
+          <div class="author-info">
+            <div class="author-name">Linda M.</div>
+            <div class="author-loc">Hays County, TX · Property Manager</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal">
+        <div class="stars-row" aria-label="5 out of 5 stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">
+          "As a fellow veteran, I knew these were my people. They treated my 15-acre homestead like it was a 500-acre ranch — full attention, quality work, and they cleaned up everything. Absolute pros. Booking them monthly now."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">J</div>
+          <div class="author-info">
+            <div class="author-name">James T.</div>
+            <div class="author-loc">Caldwell County, TX · USMC Veteran</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKING
+============================================================ -->
+<section id="booking" class="booking" aria-labelledby="booking-heading">
+  <div class="container">
+    <div class="booking-grid">
+
+      <div class="booking-info reveal">
+        <div class="section-label">Get Your Quote</div>
+        <h2 id="booking-heading" style="font-family:var(--font-display);font-size:clamp(36px,5vw,68px);color:var(--white);line-height:0.95;margin-bottom:20px;">
+          Ready When<br><span style="color:var(--burnt-orange);">You Are</span>
+        </h2>
+        <p class="section-body">
+          Tell us about your land. We'll get back to you within 24 hours with a straight,
+          honest quote — no runaround, no surprise fees.
+        </p>
+
+        <div class="contact-methods">
+          <a href="tel:+15125550178" class="contact-method">
+            <span class="cm-icon" aria-hidden="true">📞</span>
+            <div>
+              <div class="cm-label">Call or Text</div>
+              <div class="cm-value">(210) 849-3350</div>
+            </div>
+          </a>
+          <a href="mailto:info@texaspatriotlandservices.com" class="contact-method">
+            <span class="cm-icon" aria-hidden="true">✉️</span>
+            <div>
+              <div class="cm-label">Email Us</div>
+              <div class="cm-value">netoguerrero.eg@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-method">
+            <span class="cm-icon" aria-hidden="true">💬</span>
+            <div>
+              <div class="cm-label">Facebook Messenger</div>
+              <div class="cm-value">@TexasPatriotLand</div>
+            </div>
+          </a>
+        </div>
+
+        <div style="margin-top: 28px; padding: 20px; background: rgba(200,90,0,0.08); border: 1px solid rgba(200,90,0,0.25); border-radius: 4px;">
+          <p style="font-family:var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--burnt-orange); margin-bottom:8px;">Service Area</p>
+          <p style="font-size:13px; color:var(--stone); line-height:1.6;">Currently serving Travis, Bastrop, Hays, Caldwell, and Williamson counties. Expanding — ask about your location.</p>
+        </div>
+      </div>
+
+      <div class="booking-form reveal" role="form" aria-label="Quote request form">
+        <div class="form-title">Request a Free Quote</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="John" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Smith" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(512) 000-0000" autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="county">County / Area</label>
+          <select id="county" name="county">
+            <option value="" disabled selected>Select your county</option>
+            <option>Travis County</option>
+            <option>Bastrop County</option>
+            <option>Hays County</option>
+            <option>Caldwell County</option>
+            <option>Williamson County</option>
+            <option>Other (I'll describe below)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option>Brush Hogging</option>
+            <option>Pasture Shredding</option>
+            <option>Ranch Maintenance</option>
+            <option>Fence Line Clearing</option>
+            <option>Small Acreage Management</option>
+            <option>Multiple Services / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="acreage">Approximate Acreage</label>
+          <select id="acreage" name="acreage">
+            <option value="" disabled selected>Approximate size</option>
+            <option>Under 5 acres</option>
+            <option>5–25 acres</option>
+            <option>25–100 acres</option>
+            <option>100–500 acres</option>
+            <option>500+ acres</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Additional Details</label>
+          <textarea id="details" name="details" placeholder="Describe the land condition, access, urgency, or anything else we should know..."></textarea>
+        </div>
+
+        <button type="button" class="form-submit" onclick="handleFormSubmit()">
+          🤠 Request My Free Quote
+        </button>
+
+        <p style="font-size:11px; color:var(--stone); text-align:center; margin-top:12px; line-height:1.5; letter-spacing:0.04em;">
+          We respond within 24 hours · No obligation · Licensed &amp; Insured
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+============================================================ -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <h2>
+      Your Land.<br><span>Our Mission.</span>
+    </h2>
+    <p>
+      Don't let overgrown brush, untamed pastures, or neglected fence lines
+      drag down your property value. One call, one quote, one veteran-grade result.
+    </p>
+    <a href="tel:(210-849-3350)" class="phone-cta" aria-label="Call us at (210) 849-3350">
+      (210) 849-3350
+    </a>
+    <div class="cta-actions">
+      <a href="#booking" class="btn-primary">Get My Free Quote</a>
+      <a href="#services" class="btn-secondary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer role="contentinfo">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="Texas Patriot Land Services Home">
+          <div class="logo-icon">🤠</div>
+          <div class="logo-text">
+            <span class="name">TEXAS PATRIOT</span>
+            <span class="sub">Land Services</span>
+          </div>
+        </a>
+        <p>Built on Service. Powered by Texas. Veteran-owned and operated land services serving rural Texas with integrity, reliability, and professional-grade equipment.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Services links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Brush Hogging</a></li>
+          <li><a href="#services">Pasture Shredding</a></li>
+          <li><a href="#services">Ranch Maintenance</a></li>
+          <li><a href="#services">Fence Line Clearing</a></li>
+          <li><a href="#services">Small Acreage</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Company links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#growth">Our Growth Plan</a></li>
+          <li><a href="#booking">Contact</a></li>
+          <li><a href="#">Service Area</a></li>
+          <li><a href="#">Veteran Programs</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Contact information">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15125550178">(210) 210-849-3350</a></li>
+          <li><a href="mailto:info@texaspatriotland.com">netoguerreroeg@gmail.com</a></li>
+          <li><a href="#">San Antonio, Texas Area</a></li>
+          <li><a href="#">Monday–Saturday</a></li>
+          <li><a href="#">7AM – 7PM CST</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Texas Patriot Land Services, LLC · All Rights Reserved · Austin, Texas</p>
+      <div class="badges" role="list" aria-label="Business credentials">
+        <span class="footer-badge" role="listitem">🇺🇸 Veteran-Owned</span>
+        <span class="footer-badge" role="listitem">🛡️ Licensed &amp; Insured</span>
+        <span class="footer-badge" role="listitem">📋 SAM.gov Registered</span>
+        <span class="footer-badge" role="listitem">Texas LLC</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="mobile-cta-bar" role="region" aria-label="Mobile contact options">
+  <a href="tel:+15125550178" aria-label="Call Texas Patriot Land Services">📞 Call Now</a>
+  <a href="#booking" aria-label="Request a free quote">Get Free Quote</a>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  // ——————————————————————————————
+  // Scroll reveal
+  // ——————————————————————————————
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger siblings
+        const siblings = entry.target.parentElement?.querySelectorAll('.reveal');
+        let delay = 0;
+        siblings?.forEach((sib, idx) => {
+          if (sib === entry.target) delay = idx * 80;
+        });
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, Math.min(delay, 400));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // ——————————————————————————————
+  // Form handler
+  // ——————————————————————————————
+  function handleFormSubmit() {
+    const first = document.getElementById('first-name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value;
+
+    if (!first || !phone || !service) {
+      alert('Please fill in your name, phone number, and service needed — and we\'ll get back to you fast!');
+      return;
+    }
+
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = '✅ Quote Request Sent!';
+    btn.style.background = 'var(--army-green)';
+    btn.disabled = true;
+
+    // Reset after 4s
+    setTimeout(() => {
+      btn.innerHTML = '🤠 Request My Free Quote';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
+  }
+
+  // ——————————————————————————————
+  // Smooth scroll for anchor links
+  // ——————————————————————————————
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const navH = document.querySelector('nav')?.offsetHeight || 72;
+        const y = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ——————————————————————————————
+  // Nav scroll shadow
+  // ——————————————————————————————
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 40
+      ? '0 4px 24px rgba(0,0,0,0.6)'
+      : 'none';
+  }, { passive: true });
+</script>
+
+</body>
+</html>
