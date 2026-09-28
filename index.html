@@ -1782,6 +1782,17 @@
 .elara-action:hover{border-color:#00ffee}.elara-action strong{color:#00ffee}
 .powered-elara{margin-top:18px;color:#8aa4ad;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 @media(max-width:760px){.elara-box{grid-template-columns:1fr}}
+
+/* Land-services visual depth */
+.services{position:relative;background-image:linear-gradient(rgba(13,13,13,.94),rgba(13,13,13,.98)),repeating-linear-gradient(115deg,transparent 0 34px,rgba(200,90,0,.07) 35px 36px)}
+.service-card{position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.service-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--orange),transparent)}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(0,0,0,.28)}
+.why-us{position:relative}
+.why-us:after{content:"TEXAS LAND • RANCH • ACREAGE";position:absolute;right:4%;bottom:18px;font-family:var(--font-heading);font-size:clamp(28px,5vw,70px);letter-spacing:.05em;color:rgba(255,255,255,.025);pointer-events:none}
+.booking{background-image:radial-gradient(circle at 80% 20%,rgba(200,90,0,.14),transparent 28rem)}
+.elara-partner{position:relative;overflow:hidden}
+.elara-partner:after{content:"FIELD COMMANDER";position:absolute;right:-20px;bottom:-25px;font-family:var(--font-display);font-size:clamp(70px,12vw,180px);color:rgba(0,255,238,.025);pointer-events:none}
 </style>
 </head>
 <body>
