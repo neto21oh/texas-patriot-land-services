@@ -2762,7 +2762,7 @@
       Don't let overgrown brush, untamed pastures, or neglected fence lines
       drag down your property value. One call, one quote, one veteran-grade result.
     </p>
-    <a href="tel:(210-849-3350)" class="phone-cta" aria-label="Call us at (210) 849-3350">
+    <a href="tel:+12108493350" class="phone-cta" aria-label="Call us at (210) 849-3350">
       (210) 849-3350
     </a>
     <div class="cta-actions">
@@ -2906,17 +2906,23 @@
       return;
     }
 
-    const btn = document.querySelector('.form-submit');
-    btn.textContent = '✅ Quote Request Sent!';
-    btn.style.background = 'var(--army-green)';
-    btn.disabled = true;
+    const last = document.getElementById('last-name').value.trim();
+    const county = document.getElementById('county').value;
+    const acreage = document.getElementById('acreage').value;
+    const details = document.getElementById('details').value.trim();
 
-    // Reset after 4s
-    setTimeout(() => {
-      btn.innerHTML = '🤠 Request My Free Quote';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 4000);
+    const subject = encodeURIComponent('Texas Patriot Land Services — Quote Request');
+    const body = encodeURIComponent(
+      'Name: ' + first + ' ' + last + '\n' +
+      'Phone: ' + phone + '\n' +
+      'County / Area: ' + county + '\n' +
+      'Service: ' + service + '\n' +
+      'Approx. Acreage: ' + acreage + '\n\n' +
+      'Project Details:\n' + details + '\n\n' +
+      'Submitted from the Texas Patriot Land Services website.'
+    );
+
+    window.location.href = 'mailto:netoguerrero.eg@gmail.com?subject=' + subject + '&body=' + body;
   }
 
   // ——————————————————————————————
