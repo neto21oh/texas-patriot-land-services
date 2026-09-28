@@ -181,7 +181,20 @@
   }
 
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-container { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+    .nav-links {
+      display: flex;
+      order: 3;
+      width: 100%;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 8px 0 2px;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links li { flex: 0 0 auto; }
+    .nav-links a { font-size: 11px; white-space: nowrap; }
+    .nav-cta { padding: 8px 14px; }
     .nav-veteran-badge { display: none; }
   }
 
