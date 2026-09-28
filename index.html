@@ -1771,6 +1771,17 @@
     body { background: white; color: black; }
   }
 
+
+/* ELARA Pilot Partner layer */
+.elara-partner{background:linear-gradient(135deg,#071923,#0d0d0d);border-top:1px solid rgba(0,255,238,.28);border-bottom:1px solid rgba(0,255,238,.28);padding:clamp(54px,7vw,90px) 0}
+.elara-box{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center;border:1px solid rgba(0,255,238,.3);padding:clamp(24px,4vw,48px);background:rgba(3,18,26,.72)}
+.elara-kicker{font-family:var(--font-heading);font-weight:700;letter-spacing:.18em;color:#00ffee;text-transform:uppercase;font-size:12px}
+.elara-box h2{font-family:var(--font-display);font-size:clamp(42px,6vw,78px);line-height:.95;margin:12px 0 18px}
+.elara-box p{color:var(--dust);max-width:700px}
+.elara-actions{display:grid;gap:10px}.elara-action{padding:15px 18px;border:1px solid rgba(0,255,238,.35);color:var(--cream);text-decoration:none;background:#061923;font-family:var(--font-heading);font-weight:700;letter-spacing:.08em}
+.elara-action:hover{border-color:#00ffee}.elara-action strong{color:#00ffee}
+.powered-elara{margin-top:18px;color:#8aa4ad;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:760px){.elara-box{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -2749,6 +2760,24 @@
   </div>
 </section>
 
+<section class="elara-partner" id="elara">
+  <div class="container">
+    <div class="elara-box">
+      <div>
+        <div class="elara-kicker">ELARA PILOT PARTNER • FIELD OPERATIONS</div>
+        <h2>WOULD YOU LIKE TO KNOW MORE?</h2>
+        <p>Texas Patriot Land Services is a real-world ELARA pilot environment. Customers get a simpler path from questions and project photos to an estimate request, while the crew can carry approved information into ELARA Field Commander for field operations.</p>
+        <div class="powered-elara">Powered by ELARA™ • Business intelligence by NeuroMuse Technologies</div>
+      </div>
+      <div class="elara-actions">
+        <a class="elara-action" href="#contact"><strong>ASK ELARA</strong> about a land project →</a>
+        <a class="elara-action" href="#contact">Upload / describe a property →</a>
+        <a class="elara-action" href="#services">Explore services →</a>
+        <a class="elara-action" href="https://neuromusehq.com/" target="_blank" rel="noopener">See the technology behind it →</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ============================================================
