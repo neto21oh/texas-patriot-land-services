@@ -1795,7 +1795,7 @@
 
   /* 2026 premium field-ops pass */
   .hero{min-height:92svh;background:#0b0c0b}
-  .hero-sky{background:linear-gradient(90deg,rgba(7,10,8,.94),rgba(7,10,8,.68) 48%,rgba(7,10,8,.38)),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat!important}
+  .hero-sky{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,7,.90) 0%,rgba(6,9,7,.72) 46%,rgba(6,9,7,.28) 76%,rgba(6,9,7,.48) 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=88') center 58%/cover no-repeat!important;opacity:1!important}
   .hero-ground{height:27%;opacity:.95}
   .hero-content{max-width:760px}
   .hero-title{font-size:clamp(64px,9vw,128px)}
@@ -1815,7 +1815,7 @@
 
   /* Honest-capability visual pass: zero-turn operation, no fake fleet */
 .hero-ground{clip-path:none;height:18%;background:linear-gradient(180deg,rgba(74,82,64,.3),#0d0d0d)}
-  .hero-sky{background:linear-gradient(90deg,rgba(7,10,8,.94),rgba(7,10,8,.68) 48%,rgba(7,10,8,.38)),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat!important}
+  .hero-sky{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,7,.90) 0%,rgba(6,9,7,.72) 46%,rgba(6,9,7,.28) 76%,rgba(6,9,7,.48) 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=88') center 58%/cover no-repeat!important;opacity:1!important}
   .hero:after{content:"";position:absolute;inset:auto 0 17% 0;height:28%;background:linear-gradient(180deg,transparent,rgba(45,60,39,.55));border-top:1px solid rgba(244,166,36,.12)}
   .capability-now{display:inline-block;margin-top:18px;padding:8px 12px;border:1px solid rgba(169,209,142,.35);color:#a9d18e;font:700 11px var(--font-heading);letter-spacing:.14em}
 
@@ -1838,6 +1838,16 @@
 .real-work-grid figcaption{position:absolute;left:-9999px}
 .real-work-note{margin-top:12px;color:#8f958f;font-size:13px}
 @media(max-width:760px){.hero{min-height:650px}.hero-sky{background-position:42% center!important}.real-work-grid{grid-template-columns:1fr}.real-work-grid figure{min-height:200px}.real-work-head{display:block}.real-work-head p{margin-top:8px}}
+
+<style>
+@media(min-width:769px){
+ nav{display:block!important;position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;background:rgba(8,10,8,.94)!important;backdrop-filter:blur(12px)}
+ .nav-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;min-height:76px!important}
+ .nav-links{display:flex!important;align-items:center!important}
+}
+.hero-stars,.hero-horizon,.dust-particle,.hero-ground,.hero-tractor{display:none!important}
+.hero{padding-top:110px!important;min-height:760px!important;background:#090b09!important}
+.hero-content{padding-top:90px!important}
 </style>
 </head>
 <body>
@@ -1850,7 +1860,7 @@
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#main" class="nav-logo" aria-label="Texas Patriot Land Services Home">
-      <div class="logo-icon">🤠</div>
+      <div class="logo-icon">★</div>
       <div class="logo-text">
         <span class="name">TEXAS PATRIOT</span>
         <span class="sub">Land Services</span>
@@ -1860,10 +1870,10 @@
     <ul class="nav-links" role="list">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li></li>
+      
       <li><a href="#elara">Ask ELARA</a></li>
       <li><a href="#booking">Contact</a></li>
-      <li><a href="tel:+12108493350" class="nav-cta">📞 Call Now</a></li>
+      <li><a href="tel:+12108493350" class="nav-cta">Call / Text</a></li>
     </ul>
 
     <div class="nav-veteran-badge">⭐ Veteran-Owned</div>
@@ -1902,7 +1912,7 @@
 
       <p class="hero-slogan">Built on Service. Powered by Texas.</p>
 
-      <p class="hero-desc">Straightforward mowing and property maintenance for Texas landowners. Texas Patriot is starting with the equipment Ernest owns today and building the business one real job at a time.</p><div class="capability-now">AVAILABLE NOW · ZERO-TURN MOWING + PROPERTY MAINTENANCE</div>
+      <p class="hero-desc">Veteran-owned zero-turn mowing and property maintenance for San Antonio-area landowners. Clear estimates, dependable communication, and work matched to the equipment on hand.</p><div class="capability-now">AVAILABLE NOW · ZERO-TURN MOWING + PROPERTY MAINTENANCE</div>
 
       <div class="hero-actions">
         <a href="#booking" class="btn-primary">
@@ -1940,7 +1950,7 @@
   </div>
 
 </section>
-<section class="real-work-strip" id="real-work"><div class="container"><div class="real-work-head"><div><div class="section-eyebrow">REAL PROPERTY WORK</div><h2>Work You Can Actually See</h2></div><p>Real property cleanup and maintenance imagery from the operation—not a stock fleet or equipment Ernest doesn't own.</p></div><div class="real-work-grid"><figure><img src="assets/ernest-property-work.png" alt="Property cleanup and hauling work"><figcaption>Property cleanup and hauling</figcaption></figure><figure><img src="assets/ernest-zero-turn.png" alt="Zero-turn mower working a property"><figcaption>Zero-turn mowing</figcaption></figure><figure><img src="assets/zero-turn-reference.webp" alt="Zero-turn mowing service"><figcaption>Zero-turn mowing</figcaption></figure></div><div class="real-work-note">Current focus: zero-turn mowing, manageable acreage and recurring property maintenance. Larger-equipment services are not represented as current capability.</div></div></section>
+
 
 
 <!-- ============================================================
