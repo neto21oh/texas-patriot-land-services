@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Texas Patriot Land Services | Built on Service. Powered by Texas.</title>
-<meta name="description" content="Veteran-owned land services in Texas. Brush hogging, pasture shredding, ranch maintenance, fence line clearing. Serving rural Texas with pride and precision.">
-<meta name="keywords" content="brush hogging Texas, pasture shredding, ranch maintenance, fence line clearing, veteran owned land services, tractor services Texas">
+<meta name="description" content="Veteran-owned zero-turn mowing and property maintenance in Texas. Acreage mowing, field mowing and recurring property upkeep.">
+<meta name="keywords" content="zero turn mowing Texas, acreage mowing, field mowing, property maintenance, veteran owned lawn service Texas">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,7 +181,20 @@
   }
 
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-container { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+    .nav-links {
+      display: flex;
+      order: 3;
+      width: 100%;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 8px 0 2px;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links li { flex: 0 0 auto; }
+    .nav-links a { font-size: 11px; white-space: nowrap; }
+    .nav-cta { padding: 8px 14px; }
     .nav-veteran-badge { display: none; }
   }
 
@@ -269,20 +282,6 @@
       100% 100%, 0% 100%
     );
   }
-
-  /* Tractor silhouette SVG */
-  .hero-tractor {
-    position: absolute;
-    bottom: 17%;
-    right: clamp(40px, 8vw, 160px);
-    width: clamp(160px, 22vw, 340px);
-    opacity: 0;
-    animation: tractorRise 1.2s ease 0.8s forwards;
-    filter: drop-shadow(0 0 30px rgba(200,90,0,0.4));
-  }
-
-  @keyframes tractorRise {
-    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -1771,6 +1770,56 @@
     body { background: white; color: black; }
   }
 
+
+/* ELARA Pilot Partner layer */
+.elara-partner{background:linear-gradient(135deg,#071923,#0d0d0d);border-top:1px solid rgba(0,255,238,.28);border-bottom:1px solid rgba(0,255,238,.28);padding:clamp(54px,7vw,90px) 0}
+.elara-box{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center;border:1px solid rgba(0,255,238,.3);padding:clamp(24px,4vw,48px);background:rgba(3,18,26,.72)}
+.elara-kicker{font-family:var(--font-heading);font-weight:700;letter-spacing:.18em;color:#00ffee;text-transform:uppercase;font-size:12px}
+.elara-box h2{font-family:var(--font-display);font-size:clamp(42px,6vw,78px);line-height:.95;margin:12px 0 18px}
+.elara-box p{color:var(--dust);max-width:700px}
+.elara-actions{display:grid;gap:10px}.elara-action{padding:15px 18px;border:1px solid rgba(0,255,238,.35);color:var(--cream);text-decoration:none;background:#061923;font-family:var(--font-heading);font-weight:700;letter-spacing:.08em}
+.elara-action:hover{border-color:#00ffee}.elara-action strong{color:#00ffee}
+.powered-elara{margin-top:18px;color:#8aa4ad;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:760px){.elara-box{grid-template-columns:1fr}}
+
+/* Land-services visual depth */
+.services{position:relative;background-image:linear-gradient(rgba(13,13,13,.94),rgba(13,13,13,.98)),repeating-linear-gradient(115deg,transparent 0 34px,rgba(200,90,0,.07) 35px 36px)}
+.service-card{position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.service-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--orange),transparent)}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(0,0,0,.28)}
+.why-us{position:relative}
+.why-us:after{content:"TEXAS LAND • RANCH • ACREAGE";position:absolute;right:4%;bottom:18px;font-family:var(--font-heading);font-size:clamp(28px,5vw,70px);letter-spacing:.05em;color:rgba(255,255,255,.025);pointer-events:none}
+.booking{background-image:radial-gradient(circle at 80% 20%,rgba(200,90,0,.14),transparent 28rem)}
+.elara-partner{position:relative;overflow:hidden}
+.elara-partner:after{content:"FIELD COMMANDER";position:absolute;right:-20px;bottom:-25px;font-family:var(--font-display);font-size:clamp(70px,12vw,180px);color:rgba(0,255,238,.025);pointer-events:none}
+
+  /* 2026 premium field-ops pass */
+  .hero{min-height:92svh;background:#0b0c0b}
+  .hero-sky{background:
+    radial-gradient(circle at 72% 28%,rgba(244,166,36,.28),transparent 24%),
+    linear-gradient(118deg,#070807 0%,#17120c 46%,#4d2609 72%,#0d0d0d 100%)}
+  .hero-ground{height:27%;opacity:.95}
+  .hero-content{max-width:760px}
+  .hero-title{font-size:clamp(64px,9vw,128px)}
+  .hero-desc{font-size:18px;max-width:620px;color:#d0c5b9}
+  .service-card{border:1px solid rgba(255,255,255,.055);min-height:270px}
+  .service-card:hover{transform:translateY(-4px);transition:.25s ease;background:#211d18}
+  .why-us{background:linear-gradient(135deg,#17120c,#0d0d0d 70%)}
+  .ops-panel{background:#0b0e0c;border:1px solid rgba(244,166,36,.35);box-shadow:0 30px 70px rgba(0,0,0,.35);overflow:hidden}
+  .ops-top{display:flex;justify-content:space-between;gap:12px;padding:15px 18px;background:#151713;border-bottom:1px solid rgba(244,166,36,.2);font-family:var(--font-heading);font-size:12px;letter-spacing:.14em;color:var(--amber-glow)}
+  .ops-live{color:#a9d18e}.ops-screen{padding:12px 18px}
+  .ops-line{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:var(--font-heading)}
+  .ops-line b{color:var(--burnt-orange);font-size:12px}.ops-line span{color:var(--cream);font-weight:600}.ops-line em{font-style:normal;font-size:10px;letter-spacing:.12em;color:var(--stone)}
+  .ops-note{padding:14px 18px;margin:0;color:var(--dust);font-size:12px}
+  .booking-form{box-shadow:0 30px 80px rgba(0,0,0,.28);border:1px solid rgba(244,166,36,.18)}
+  .elara-box{box-shadow:0 30px 80px rgba(0,0,0,.25)}
+  @media(max-width:768px){.nav-inner{height:auto;min-height:64px;flex-wrap:wrap;padding:10px 0}.hero{padding-top:130px}.hero-stats{position:relative;margin-top:42px}.hero{display:block;padding-bottom:0}.hero-content{padding-top:40px}.ops-line{grid-template-columns:28px 1fr}.ops-line em{grid-column:2}.metrics-row{grid-template-columns:1fr}}
+
+  /* Honest-capability visual pass: zero-turn operation, no fake fleet */
+  .hero-tractor{display:none!important}.hero-ground{clip-path:none;height:18%;background:linear-gradient(180deg,rgba(74,82,64,.3),#0d0d0d)}
+  .hero-sky{background:radial-gradient(ellipse at 72% 38%,rgba(244,166,36,.3),transparent 30%),linear-gradient(155deg,#080b08 0%,#172018 45%,#553013 78%,#0d0d0d 100%)}
+  .hero:after{content:"";position:absolute;inset:auto 0 17% 0;height:28%;background:linear-gradient(180deg,transparent,rgba(45,60,39,.55));border-top:1px solid rgba(244,166,36,.12)}
+  .capability-now{display:inline-block;margin-top:18px;padding:8px 12px;border:1px solid rgba(169,209,142,.35);color:#a9d18e;font:700 11px var(--font-heading);letter-spacing:.14em}
 </style>
 </head>
 <body>
@@ -1782,7 +1831,7 @@
 ============================================================ -->
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="Texas Patriot Land Services Home">
+    <a href="#main" class="nav-logo" aria-label="Texas Patriot Land Services Home">
       <div class="logo-icon">🤠</div>
       <div class="logo-text">
         <span class="name">TEXAS PATRIOT</span>
@@ -1793,9 +1842,10 @@
     <ul class="nav-links" role="list">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#growth">Growth</a></li>
+      <li></li>
+      <li><a href="#elara">Ask ELARA</a></li>
       <li><a href="#booking">Contact</a></li>
-      <li><a href="tel:(210)849-3350" class="nav-cta">📞 Call Now</a></li>
+      <li><a href="tel:+12108493350" class="nav-cta">📞 Call Now</a></li>
     </ul>
 
     <div class="nav-veteran-badge">⭐ Veteran-Owned</div>
@@ -1818,64 +1868,13 @@
   <div class="dust-particle" style="width:8px;height:8px;bottom:17%;right:40%;animation-duration:5s;animation-delay:0.8s;" aria-hidden="true"></div>
   <div class="dust-particle" style="width:3px;height:3px;bottom:20%;right:25%;animation-duration:7s;animation-delay:2s;" aria-hidden="true"></div>
 
-  <!-- SVG Tractor Silhouette -->
-  <svg class="hero-tractor" aria-hidden="true" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Large rear wheel -->
-    <circle cx="100" cy="150" r="60" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
-    <circle cx="100" cy="150" r="45" fill="none" stroke="#1A0E00" stroke-width="2"/>
-    <circle cx="100" cy="150" r="12" fill="#1A0E00"/>
-    <!-- Wheel spokes -->
-    <line x1="100" y1="90" x2="100" y2="110" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="100" y1="190" x2="100" y2="210" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="40" y1="150" x2="60" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="140" y1="150" x2="160" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="58" y1="108" x2="73" y2="123" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="127" y1="177" x2="142" y2="192" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="58" y1="192" x2="73" y2="177" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="127" y1="123" x2="142" y2="108" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Small front wheel -->
-    <circle cx="265" cy="163" r="28" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
-    <circle cx="265" cy="163" r="20" fill="none" stroke="#1A0E00" stroke-width="1.5"/>
-    <circle cx="265" cy="163" r="7" fill="#1A0E00"/>
-    <!-- Body -->
-    <path d="M160 150 L160 90 L220 80 L260 85 L270 130 L160 150Z" fill="#0D0D0D"/>
-    <!-- Hood -->
-    <path d="M160 110 L220 95 L260 100 L260 130 L160 130Z" fill="#1A0E00"/>
-    <!-- Engine grill lines -->
-    <line x1="175" y1="100" x2="175" y2="128" stroke="#2C1800" stroke-width="2"/>
-    <line x1="190" y1="97" x2="190" y2="127" stroke="#2C1800" stroke-width="2"/>
-    <line x1="205" y1="95" x2="205" y2="126" stroke="#2C1800" stroke-width="2"/>
-    <!-- Exhaust stack -->
-    <rect x="218" y="65" width="8" height="30" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="1.5"/>
-    <!-- Cab -->
-    <rect x="130" y="85" width="70" height="65" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
-    <!-- Cab window -->
-    <rect x="140" y="93" width="50" height="35" rx="2" fill="rgba(180,100,0,0.15)" stroke="#2C1800" stroke-width="1"/>
-    <!-- ROPS bar -->
-    <path d="M130 85 L130 55 L200 55 L200 85" fill="none" stroke="#2C1800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Ground shadow / dust -->
-    <ellipse cx="180" cy="196" rx="100" ry="8" fill="rgba(200,90,0,0.12)"/>
-    <!-- Brush hog attachment -->
-    <rect x="60" y="160" width="100" height="20" rx="2" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
-    <line x1="80" y1="160" x2="80" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="100" y1="160" x2="100" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="120" y1="160" x2="120" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="140" y1="160" x2="140" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <!-- Smoke puffs -->
-    <circle cx="222" cy="56" r="6" fill="rgba(200,140,80,0.2)"/>
-    <circle cx="218" cy="44" r="8" fill="rgba(200,140,80,0.15)"/>
-    <circle cx="225" cy="33" r="5" fill="rgba(200,140,80,0.1)"/>
-  </svg>
 
   <div class="hero-ground" aria-hidden="true"></div>
 
   <div class="container">
     <div class="hero-content">
 
-      <div class="hero-badge">
-        <span class="star">★</span>
-        Veteran-Owned &amp; Operated · Texas Proud
-      </div>
+      <div class="hero-badge"><span class="star">★</span> Veteran-Owned · Owner-Operated · Texas</div>
 
       <h1 class="hero-title">
         <span class="texas">Texas</span>
@@ -1885,11 +1884,7 @@
 
       <p class="hero-slogan">Built on Service. Powered by Texas.</p>
 
-      <p class="hero-desc">
-        From overgrown pastures to pristine ranch land — we show up, work hard,
-        and deliver results. Serving rural Texas with the discipline and integrity
-        of those who served our nation.
-      </p>
+      <p class="hero-desc">Straightforward mowing and property maintenance for Texas landowners. Texas Patriot is starting with the equipment Ernest owns today and building the business one real job at a time.</p><div class="capability-now">AVAILABLE NOW · ZERO-TURN MOWING + PROPERTY MAINTENANCE</div>
 
       <div class="hero-actions">
         <a href="#booking" class="btn-primary">
@@ -1913,17 +1908,15 @@
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-num">TX</span>
-        <span class="stat-label">Licensed &amp;<br>Insured</span>
+        <span class="stat-label">Texas<br>Based</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
-        <span class="stat-num">24h</span>
-        <span class="stat-label">Quote<br>Turnaround</span>
+        <span class="stat-num">FAST</span><span class="stat-label">Quote<br>Follow-Up</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
-        <span class="stat-num">★ 5.0</span>
-        <span class="stat-label">Customer<br>Rating</span>
+        <span class="stat-num">LOCAL</span><span class="stat-label">Texas<br>Service</span>
       </div>
     </div>
   </div>
@@ -1940,14 +1933,8 @@
         <span class="icon">🇺🇸</span>
         <span>US <span class="highlight">Army Veteran</span></span>
       </div>
-      <div class="trust-item">
-        <span class="icon">🛡️</span>
-        <span><span class="highlight">Fully Insured</span> Operation</span>
-      </div>
-      <div class="trust-item">
-        <span class="icon">📋</span>
-        <span><span class="highlight">SAM.gov</span> Registered</span>
-      </div>
+      
+      
       <div class="trust-item">
         <span class="icon">⚙️</span>
         <span>Professional <span class="highlight">Equipment</span></span>
@@ -1973,7 +1960,7 @@
       </h2>
       <p class="section-body">
         We bring military precision and Texas toughness to every job. Whether you need
-        a single pasture shredded or an ongoing ranch management contract, Texas Patriot
+        a one-time acreage mowing job or recurring property-maintenance schedule, Texas Patriot
         Land Services delivers consistent, quality work — on time and on budget.
       </p>
     </header>
@@ -1982,7 +1969,7 @@
 
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true">🌾</span>
-        <h3>Brush Hogging</h3>
+        <h3>Acreage Mowing</h3>
         <p>Heavy-duty rotary cutting of overgrown vegetation, thick brush, and unwanted scrub. We clear what others won't tackle. Flat terrain to rough country.</p>
         <div class="service-detail">
           <span class="service-tag">1–500+ Acres</span>
@@ -1993,8 +1980,8 @@
 
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true">🚜</span>
-        <h3>Pasture Shredding</h3>
-        <p>Keep your grazing land healthy and productive. Shredding controls weeds, manages growth stages, and maintains optimal forage conditions for livestock.</p>
+        <h3>Pasture & Field Mowing</h3>
+        <p>Keep fields and larger grassy areas maintained with zero-turn mowing where terrain and site conditions are appropriate.</p>
         <div class="service-detail">
           <span class="service-tag">Routine Contracts</span>
           <span class="service-tag">Weed Control</span>
@@ -2004,7 +1991,7 @@
 
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true">🏡</span>
-        <h3>Ranch Maintenance</h3>
+        <h3>Property Maintenance</h3>
         <p>Full-service property upkeep for working ranches, hunting properties, and rural estates. From mowing schedules to seasonal prep — we handle it all.</p>
         <div class="service-detail">
           <span class="service-tag">Monthly Plans</span>
@@ -2015,7 +2002,7 @@
 
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true">🌳</span>
-        <h3>Fence Line Clearing</h3>
+        <h3>Fence-Line Mowing</h3>
         <p>Restore and maintain your property boundaries. We clear encroaching brush and vegetation from fence lines so your barriers stay visible, functional, and legal.</p>
         <div class="service-detail">
           <span class="service-tag">All Fence Types</span>
@@ -2029,22 +2016,17 @@
         <h3>Small Acreage Management</h3>
         <p>Perfect for homesteads, hobby farms, and rural residential lots. Targeted land management that keeps small properties looking clean and maintained.</p>
         <div class="service-detail">
-          <span class="service-tag">1–25 Acres</span>
+          <span class="service-tag">Small Acreage</span>
           <span class="service-tag">Homestead Friendly</span>
           <span class="service-tag">Flexible Scheduling</span>
         </div>
       </article>
 
-      <article class="service-card reveal" style="background: linear-gradient(135deg, rgba(200,90,0,0.12), rgba(26,26,26,1));">
-        <span class="service-icon" aria-hidden="true">📈</span>
-        <h3>Expanding Services</h3>
-        <p>Growing to serve county contracts, disaster cleanup, agricultural support, and government subcontracting. Ask about upcoming capabilities and preferred vendor registration.</p>
-        <div class="service-detail">
-          <span class="service-tag">County Contracts</span>
-          <span class="service-tag">Disaster Cleanup</span>
-          <span class="service-tag">Ag Support</span>
-          <span class="service-tag">Gov. Sub</span>
-        </div>
+      <article class="service-card reveal" style="background:linear-gradient(135deg,rgba(200,90,0,.12),rgba(26,26,26,1))">
+        <span class="service-icon" aria-hidden="true">↗</span>
+        <h3>Expanding Capabilities</h3>
+        <p>Texas Patriot is growing deliberately. Larger equipment work, broader property services and contracting opportunities are future capabilities—not services represented as available today.</p>
+        <div class="service-detail"><span class="service-tag">Future Equipment</span><span class="service-tag">Partner Work</span><span class="service-tag">Future Contracting</span></div>
       </article>
 
     </div>
@@ -2075,9 +2057,7 @@
         </div>
 
         <p class="section-body">
-          We served our country with honor. Now we serve Texas landowners with that same
-          commitment — showing up on time, doing the work right, and standing behind
-          every job we complete. No shortcuts. No excuses.
+          Veteran-owned land service built around clear communication, practical field work, and respect for the property. From the first conversation through job documentation, the goal is simple: understand the work and keep the owner informed.
         </p>
 
         <ul class="values-list">
@@ -2085,83 +2065,52 @@
             <div class="v-icon" aria-hidden="true">🎯</div>
             <div>
               <h4>Mission Focus</h4>
-              <p>Every job is a mission. We assess, plan, execute, and deliver with precision that comes from military discipline.</p>
+              <p>Each project starts with the property, the scope, access conditions, and the result the landowner is trying to achieve.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">🤝</div>
             <div>
               <h4>Your Word Is Your Bond</h4>
-              <p>We quote honestly, show up when we say we will, and communicate transparently about every aspect of your project.</p>
+              <p>Project details, expectations, and changes stay visible so the customer knows what is being discussed.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">⚙️</div>
             <div>
               <h4>Professional Equipment</h4>
-              <p>Commercial-grade tractors and implements, properly maintained, properly insured. We come ready to work.</p>
+              <p>Equipment and job requirements are matched to the work being discussed before the project moves forward.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">📍</div>
             <div>
               <h4>Texas Through and Through</h4>
-              <p>Local knowledge, local investment. We understand Texas land, Texas weather, and Texas landowner expectations.</p>
+              <p>A Texas-focused operation built around landowners, acreage work, and practical property needs.</p>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="why-visual reveal">
-        <div class="quote-block">
-          <p class="quote-text">
-            "The discipline we carried in uniform, we carry into every field we work.
-            Your land deserves the same respect we gave our post."
-          </p>
-          <p class="quote-attr">— Owner, Texas Patriot Land Services · U.S. Army Veteran</p>
+        <div class="ops-panel">
+          <div class="ops-top"><span>ELARA™ FIELD COMMANDER</span><span class="ops-live">PILOT ACTIVE</span></div>
+          <div class="ops-screen">
+            <div class="ops-line"><b>01</b><span>Property inquiry</span><em>CAPTURE</em></div>
+            <div class="ops-line"><b>02</b><span>Photos + acreage + scope</span><em>ORGANIZE</em></div>
+            <div class="ops-line"><b>03</b><span>Estimate preparation</span><em>REVIEW</em></div>
+            <div class="ops-line"><b>04</b><span>Field notes + measurements</span><em>DOCUMENT</em></div>
+            <div class="ops-line"><b>05</b><span>Daily report</span><em>APPROVE</em></div>
+          </div>
+          <p class="ops-note">Technology supports the work. Ernest stays in command.</p>
         </div>
-
         <div class="metrics-row">
-          <div class="metric-box">
-            <div class="metric-num">100%</div>
-            <div class="metric-label">Job<br>Completion Rate</div>
-          </div>
-          <div class="metric-box">
-            <div class="metric-num">24h</div>
-            <div class="metric-label">Quote<br>Response</div>
-          </div>
-          <div class="metric-box">
-            <div class="metric-num">$2M+</div>
-            <div class="metric-label">Liability<br>Coverage</div>
-          </div>
+          <div class="metric-box"><div class="metric-num">LOCAL</div><div class="metric-label">Current<br>Equipment</div></div>
+          <div class="metric-box"><div class="metric-num">DIRECT</div><div class="metric-label">Quote<br>Requests</div></div>
+          <div class="metric-box"><div class="metric-num">VETERAN</div><div class="metric-label">Owned &amp;<br>Operated</div></div>
         </div>
 
-        <!-- Color Palette -->
-        <div style="margin-top: 32px;">
-          <div style="font-family: var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--stone); margin-bottom:52px;">Brand Color System</div>
-          <div class="palette" role="list" aria-label="Brand colors">
-            <div class="swatch" style="background:#C85A00;" role="listitem">
-              <span class="swatch-label">Burnt Orange</span>
-            </div>
-            <div class="swatch" style="background:#E8720A;" role="listitem">
-              <span class="swatch-label">Deep Orange</span>
-            </div>
-            <div class="swatch" style="background:#F4A624;" role="listitem">
-              <span class="swatch-label">Amber Glow</span>
-            </div>
-            <div class="swatch" style="background:#0D0D0D;" role="listitem" aria-label="Matte Black">
-              <span class="swatch-label" style="color:#555">Matte Black</span>
-            </div>
-            <div class="swatch" style="background:#2C2318;" role="listitem">
-              <span class="swatch-label">Dark Earth</span>
-            </div>
-            <div class="swatch" style="background:#4A5240;" role="listitem">
-              <span class="swatch-label">Army Green</span>
-            </div>
-          </div>
         </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -2169,441 +2118,16 @@
 <!-- ============================================================
      LOGO CONCEPTS
 ============================================================ -->
-<section class="logo-showcase" aria-labelledby="logo-heading">
-  <div class="container">
-    <div class="section-label reveal">Brand Identity</div>
-    <h2 class="section-title reveal" id="logo-heading">
-      Logo <span class="accent">Concepts</span>
-    </h2>
-
-    <div class="logo-concepts">
-
-      <div class="logo-concept reveal">
-        <div class="logo-preview">
-          <div class="logo-v1">
-            TEXAS<span>PATRIOT</span>
-            <small>LAND SERVICES · EST. 2024</small>
-          </div>
-        </div>
-        <div class="logo-concept-label">Concept A — Edge &amp; Authority</div>
-        <div class="logo-concept-desc">Bold vertical rule with stacked wordmark. Strong, readable, masculine. Works on truck doors, business cards, and website headers.</div>
-      </div>
-
-      <div class="logo-concept reveal">
-        <div class="logo-preview">
-          <div class="logo-v2">
-            <span class="star-emblem">⭐</span>
-            <span class="company-name">TEXAS PATRIOT</span>
-            <span class="company-sub">Land Services · Veteran Owned</span>
-          </div>
-        </div>
-        <div class="logo-concept-label">Concept B — Star &amp; Pride</div>
-        <div class="logo-concept-desc">Centered star emblem with clean type below. Evokes Texas flag, veteran pride, and approachable authority. Ideal for embroidery and signage.</div>
-      </div>
-
-      <div class="logo-concept reveal">
-        <div class="logo-preview">
-          <div class="logo-v3">
-            <span class="top-line">Built on Service · Powered by Texas</span>
-            <span class="main-name">TX PATRIOT</span>
-            <span class="tag-line">Land Services · Veteran Owned &amp; Operated</span>
-          </div>
-        </div>
-        <div class="logo-concept-label">Concept C — Warm Field Badge</div>
-        <div class="logo-concept-desc">Full badge format on brand gradient. High-visibility for equipment decals, yard signs, and social media profile images.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ============================================================
      GROWTH ROADMAP
 ============================================================ -->
-<section id="growth" class="growth" aria-labelledby="growth-heading">
-  <div class="container">
-
-    <div class="reveal">
-      <div class="section-label">Scalability Plan</div>
-      <h2 class="section-title" id="growth-heading">
-        Built to<br><span class="accent">Grow</span>
-      </h2>
-      <p class="section-body">
-        Texas Patriot Land Services is structured from day one for long-term scalability —
-        from a single tractor operation to a multi-crew fleet holding government and county
-        contracts across Texas.
-      </p>
-    </div>
-
-    <div class="roadmap" role="list">
-
-      <div class="phase reveal" role="listitem">
-        <div class="phase-marker" aria-hidden="true">1</div>
-        <div class="phase-content">
-          <div class="phase-tag">Months 1–6 · Foundation</div>
-          <div class="phase-title">Launch &amp; Local Domination</div>
-          <div class="phase-items">
-            <span class="phase-item">LLC Formation</span>
-            <span class="phase-item">EIN + Business Banking</span>
-            <span class="phase-item">DUNS / UEI Registration</span>
-            <span class="phase-item">Google Business Profile</span>
-            <span class="phase-item">First 3 Net-30 Vendors</span>
-            <span class="phase-item">Local Facebook Groups</span>
-            <span class="phase-item">First 10 Clients</span>
-            <span class="phase-item">Liability Insurance</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="phase reveal" role="listitem">
-        <div class="phase-marker" aria-hidden="true">2</div>
-        <div class="phase-content">
-          <div class="phase-tag">Months 6–18 · Credit &amp; Contracts</div>
-          <div class="phase-title">Build Credit &amp; Win Contracts</div>
-          <div class="phase-items">
-            <span class="phase-item">SAM.gov Registration</span>
-            <span class="phase-item">SDVOSB Certification</span>
-            <span class="phase-item">5–8 Net-30 Vendor Accounts</span>
-            <span class="phase-item">Business Credit Card</span>
-            <span class="phase-item">Equipment LOC Application</span>
-            <span class="phase-item">County HOA Contracts</span>
-            <span class="phase-item">Subcontractor Relationships</span>
-            <span class="phase-item">2nd Machine / Employee</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="phase reveal" role="listitem">
-        <div class="phase-marker" aria-hidden="true">3</div>
-        <div class="phase-content">
-          <div class="phase-tag">Year 2–3 · Fleet Expansion</div>
-          <div class="phase-title">Fleet Growth &amp; Government Bids</div>
-          <div class="phase-items">
-            <span class="phase-item">3-Machine Fleet</span>
-            <span class="phase-item">Crew Foreman Hire</span>
-            <span class="phase-item">TxDOT ROW Bids</span>
-            <span class="phase-item">FEMA Disaster Roster</span>
-            <span class="phase-item">County Mowing Contracts</span>
-            <span class="phase-item">Commercial Line of Credit</span>
-            <span class="phase-item">QuickBooks + Invoicing System</span>
-            <span class="phase-item">Branded Truck Fleet</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="phase reveal" role="listitem">
-        <div class="phase-marker" aria-hidden="true">4</div>
-        <div class="phase-content">
-          <div class="phase-tag">Year 3–5 · Market Leader</div>
-          <div class="phase-title">Multi-County Market Leader</div>
-          <div class="phase-items">
-            <span class="phase-item">5+ Machine Fleet</span>
-            <span class="phase-item">Multiple County Contracts</span>
-            <span class="phase-item">Federal 8(a) Exploration</span>
-            <span class="phase-item">Ag Support Division</span>
-            <span class="phase-item">Disaster Cleanup Division</span>
-            <span class="phase-item">Equipment Financing Brokerage</span>
-            <span class="phase-item">Franchise / Licensing Model</span>
-            <span class="phase-item">$1M+ Annual Revenue</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ============================================================
      BUSINESS CREDIT PLAN
 ============================================================ -->
-<section class="credit" aria-labelledby="credit-heading">
-  <div class="container">
-
-    <div class="reveal">
-      <div class="section-label">Business Fundability</div>
-      <h2 class="section-title" id="credit-heading">
-        Credit Building<br><span class="accent">Roadmap</span>
-      </h2>
-      <p class="section-body">
-        A properly structured business credit profile unlocks equipment financing, government
-        contracts, and commercial lending — critical for scaling from a single-tractor operation
-        to a multi-crew fleet. Here is the step-by-step plan.
-      </p>
-    </div>
-
-    <div class="credit-grid">
-
-      <div class="credit-card reveal">
-        <div class="credit-step">01</div>
-        <h4>LLC Formation</h4>
-        <p>File Texas LLC through the Secretary of State. Use the business name exactly as branded. Obtain a registered agent. Keep personal and business assets legally separated from day one.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">Texas SOS</span>
-          <span class="credit-tag">$300 Filing</span>
-          <span class="credit-tag">Registered Agent</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">02</div>
-        <h4>EIN Setup</h4>
-        <p>Apply for an Employer Identification Number (EIN) through the IRS immediately after LLC approval. This is your business's Social Security Number — used for all banking, credit, and tax purposes.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">IRS.gov (Free)</span>
-          <span class="credit-tag">Same Day Online</span>
-          <span class="credit-tag">Required for Banking</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">03</div>
-        <h4>Business Banking</h4>
-        <p>Open a dedicated business checking account under the LLC name and EIN. Use a local Texas bank or credit union when possible. Never comingle personal and business funds. Aim for 90 days of average daily balance before applying for credit.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">Texas Bank / CU</span>
-          <span class="credit-tag">Separate Account</span>
-          <span class="credit-tag">90-Day Season</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">04</div>
-        <h4>DUNS / UEI Number</h4>
-        <p>Register for a Unique Entity Identifier (UEI) through SAM.gov — this replaced the DUNS number for federal contracting. Required for all government work. Free registration, process takes 1–2 weeks.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">SAM.gov (Free)</span>
-          <span class="credit-tag">Federal Contracts</span>
-          <span class="credit-tag">Annual Renewal</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">05</div>
-        <h4>SAM.gov Registration</h4>
-        <p>Complete full System for Award Management (SAM.gov) registration — required for all federal contracts, grants, and subcontracting. Include NAICS codes: 115310 (Support Activities for Forestry), 561730 (Landscaping), 238910 (Site Preparation).</p>
-        <div class="credit-tags">
-          <span class="credit-tag">NAICS 115310</span>
-          <span class="credit-tag">NAICS 561730</span>
-          <span class="credit-tag">SDVOSB Flag</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">06</div>
-        <h4>Net-30 Vendor Accounts</h4>
-        <p>Open 3–5 Net-30 trade accounts immediately. These report to Dun &amp; Bradstreet and build your Paydex score. Start with: Uline, Grainger, HD Supply, Quill, Sunbelt Rentals. Pay early — always before the due date.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">Uline</span>
-          <span class="credit-tag">Grainger</span>
-          <span class="credit-tag">Quill</span>
-          <span class="credit-tag">HD Supply</span>
-          <span class="credit-tag">Sunbelt</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">07</div>
-        <h4>Vendor Tradelines</h4>
-        <p>After 90 days of Net-30 activity, apply for a business credit card (Ramp, Brex, or Capital One Spark). Use for fuel, supplies, and equipment — never personal expenses. Keep utilization under 30% and pay in full monthly.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">Ramp / Brex</span>
-          <span class="credit-tag">&lt;30% Utilization</span>
-          <span class="credit-tag">Pay In Full</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">08</div>
-        <h4>Equipment Financing</h4>
-        <p>After 6+ months of business banking history and a Paydex score of 80+, approach equipment lenders. Farm Credit, AgDirect, and Kubota Credit offer favorable terms for agricultural equipment. Seller-financed used equipment is also a strong early option.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">Farm Credit</span>
-          <span class="credit-tag">AgDirect</span>
-          <span class="credit-tag">Kubota Credit</span>
-          <span class="credit-tag">Paydex 80+</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">09</div>
-        <h4>SDVOSB Certification</h4>
-        <p>Apply for Service-Disabled Veteran-Owned Small Business (SDVOSB) or Veteran-Owned Small Business (VOSB) certification through the VA's SBA Vet Cert program. Opens set-aside federal contracts specifically designated for veteran-owned companies.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">VA SBA VetCert</span>
-          <span class="credit-tag">Set-Aside Contracts</span>
-          <span class="credit-tag">SDVOSB / VOSB</span>
-        </div>
-      </div>
-
-      <div class="credit-card reveal">
-        <div class="credit-step">10</div>
-        <h4>Commercial Fundability</h4>
-        <p>By month 18–24, you should have: D&amp;B Paydex 80+, Experian Intelliscore 70+, 2 years tax returns, documented revenue, and a bankable P&amp;L. This profile qualifies for SBA 7(a) loans, equipment lines of credit, and commercial real estate deposits.</p>
-        <div class="credit-tags">
-          <span class="credit-tag">SBA 7(a)</span>
-          <span class="credit-tag">Paydex 80+</span>
-          <span class="credit-tag">Equipment LOC</span>
-          <span class="credit-tag">2-Yr Tax Returns</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ============================================================
      SEO + SOCIAL STRATEGY
 ============================================================ -->
-<section class="strategy" aria-labelledby="strategy-heading">
-  <div class="container">
-
-    <div class="reveal">
-      <div class="section-label">Go-To-Market</div>
-      <h2 class="section-title" id="strategy-heading">
-        Growth<br><span class="accent">Strategy</span>
-      </h2>
-    </div>
-
-    <div class="strategy-cols">
-
-      <div class="strategy-col reveal">
-        <div class="strategy-col-header">
-          <span class="strategy-col-icon" aria-hidden="true">🔍</span>
-          <h3>Local SEO</h3>
-        </div>
-        <ul class="strategy-list" role="list">
-          <li>Claim and fully optimize Google Business Profile with photos, services, and weekly posts</li>
-          <li>Target keywords: "brush hogging [county name] TX", "tractor service near me", "pasture clearing Texas"</li>
-          <li>Build local citations on Yelp, Angi, Thumbtack, and Texas agricultural directories</li>
-          <li>Create county-specific landing pages (e.g., /brush-hogging-travis-county)</li>
-          <li>Collect 5-star Google reviews from every satisfied customer — use QR card handout</li>
-          <li>Submit to veteran business directories and Texas Chamber directories</li>
-          <li>Optimize for "veteran owned land services [city] Texas" voice searches</li>
-          <li>Post before/after job photos consistently — Google loves fresh media</li>
-        </ul>
-      </div>
-
-      <div class="strategy-col reveal">
-        <div class="strategy-col-header">
-          <span class="strategy-col-icon" aria-hidden="true">📱</span>
-          <h3>Social Media</h3>
-        </div>
-        <ul class="strategy-list" role="list">
-          <li>Facebook: Primary channel — join and serve 10+ local rural Texas Facebook Groups</li>
-          <li>Instagram: Cinematic before/after reels, tractor silhouette content, sunset job site shots</li>
-          <li>TikTok: "Day in the life" tractor operator content — massive organic reach in rural niches</li>
-          <li>Post 3–4x per week: job progress, completed work, team moments, equipment shots</li>
-          <li>Use hashtags: #TexasLandServices #BrushHogging #VeteranOwned #RanchLife #TexasFarmer</li>
-          <li>Run $5/day Facebook zip-code-targeted ads to landowners in service area</li>
-          <li>Share veteran stories and community involvement — builds deep brand loyalty</li>
-          <li>Partner with rural real estate agents for referral content partnerships</li>
-        </ul>
-      </div>
-
-      <div class="strategy-col reveal">
-        <div class="strategy-col-header">
-          <span class="strategy-col-icon" aria-hidden="true">🤝</span>
-          <h3>Trust Building</h3>
-        </div>
-        <ul class="strategy-list" role="list">
-          <li>Provide written quotes within 24 hours — every time, no exceptions</li>
-          <li>Send job completion photos via text to every customer, same day</li>
-          <li>Carry and display liability certificate — share digital copy on request</li>
-          <li>Create a customer loyalty program: 10th visit = free service add-on</li>
-          <li>Send handwritten thank-you cards after first jobs — deeply memorable</li>
-          <li>Offer a satisfaction guarantee: "Not happy? We come back free."</li>
-          <li>Display veteran credentials prominently on vehicles, website, and uniforms</li>
-          <li>Ask for referrals actively — offer $25–$50 referral credit per new customer</li>
-        </ul>
-      </div>
-
-      <div class="strategy-col reveal">
-        <div class="strategy-col-header">
-          <span class="strategy-col-icon" aria-hidden="true">📅</span>
-          <h3>Booking System</h3>
-        </div>
-        <ul class="strategy-list" role="list">
-          <li>Phase 1: Google Form + Calendly for quote requests — zero cost, immediate deployment</li>
-          <li>Phase 2: Jobber or Housecall Pro for scheduling, invoicing, and customer management</li>
-          <li>Offer 3 booking methods: online form, phone call, and Facebook Messenger</li>
-          <li>Send automated SMS confirmations and day-before reminders</li>
-          <li>Use Stripe or Square for deposits — 25% deposit secures the booking</li>
-          <li>Create service area map on Google Maps — embed on website contact page</li>
-          <li>Phase 3: Custom quote calculator on website for instant ballpark pricing</li>
-          <li>Follow up with every unbooked quote after 3 days — 30% conversion rate boost</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     TESTIMONIALS
-============================================================ -->
-<section class="testimonials" aria-labelledby="testimonials-heading">
-  <div class="container">
-
-    <div class="reveal">
-      <div class="section-label">What Clients Say</div>
-      <h2 class="section-title" id="testimonials-heading">
-        Texas Tough<br><span class="accent">Reputation</span>
-      </h2>
-    </div>
-
-    <div class="testimonial-grid">
-
-      <article class="testimonial-card reveal">
-        <div class="stars-row" aria-label="5 out of 5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <p class="testimonial-text">
-          "These guys showed up exactly when they said they would, cleared 60 acres of cedar and mesquite in two days flat, and left the place looking incredible. Veteran-owned and it shows — professional, reliable, and took pride in the work."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar" aria-hidden="true">R</div>
-          <div class="author-info">
-            <div class="author-name">Randy B.</div>
-            <div class="author-loc">Bastrop County, TX · Ranch Owner</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card reveal">
-        <div class="stars-row" aria-label="5 out of 5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <p class="testimonial-text">
-          "I've tried three other services in the county. None of them come close. Texas Patriot quoted me fairly, finished on time, sent photos when done, and followed up the next week. I gave them an annual contract on the spot."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar" aria-hidden="true">L</div>
-          <div class="author-info">
-            <div class="author-name">Linda M.</div>
-            <div class="author-loc">Hays County, TX · Property Manager</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card reveal">
-        <div class="stars-row" aria-label="5 out of 5 stars">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-        <p class="testimonial-text">
-          "As a fellow veteran, I knew these were my people. They treated my 15-acre homestead like it was a 500-acre ranch — full attention, quality work, and they cleaned up everything. Absolute pros. Booking them monthly now."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar" aria-hidden="true">J</div>
-          <div class="author-info">
-            <div class="author-name">James T.</div>
-            <div class="author-loc">Caldwell County, TX · USMC Veteran</div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
+<!-- Customer reviews will be added here after verified client feedback is available. -->
 
 <!-- ============================================================
      BOOKING
@@ -2618,8 +2142,7 @@
           Ready When<br><span style="color:var(--burnt-orange);">You Are</span>
         </h2>
         <p class="section-body">
-          Tell us about your land. We'll get back to you within 24 hours with a straight,
-          honest quote — no runaround, no surprise fees.
+          Tell us about your land and the work you need. We’ll follow up about the property and your quote request.
         </p>
 
         <div class="contact-methods">
@@ -2635,13 +2158,6 @@
             <div>
               <div class="cm-label">Email Us</div>
               <div class="cm-value">netoguerrero.eg@gmail.com</div>
-            </div>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-method">
-            <span class="cm-icon" aria-hidden="true">💬</span>
-            <div>
-              <div class="cm-label">Facebook Messenger</div>
-              <div class="cm-value">@TexasPatriotLand</div>
             </div>
           </a>
         </div>
@@ -2688,10 +2204,10 @@
           <label for="service">Service Needed</label>
           <select id="service" name="service">
             <option value="" disabled selected>Select a service</option>
-            <option>Brush Hogging</option>
-            <option>Pasture Shredding</option>
-            <option>Ranch Maintenance</option>
-            <option>Fence Line Clearing</option>
+            <option>Acreage Mowing</option>
+            <option>Pasture & Field Mowing</option>
+            <option>Property Maintenance</option>
+            <option>Fence-Line Mowing</option>
             <option>Small Acreage Management</option>
             <option>Multiple Services / Not Sure</option>
           </select>
@@ -2719,7 +2235,7 @@
         </button>
 
         <p style="font-size:11px; color:var(--stone); text-align:center; margin-top:12px; line-height:1.5; letter-spacing:0.04em;">
-          We respond within 24 hours · No obligation · Licensed &amp; Insured
+          No obligation · Tell us about the property and the work you need
         </p>
       </div>
 
@@ -2737,9 +2253,9 @@
     </h2>
     <p>
       Don't let overgrown brush, untamed pastures, or neglected fence lines
-      drag down your property value. One call, one quote, one veteran-grade result.
+      drag down your property value. One call, one quote, one straightforward path to getting the work discussed.
     </p>
-    <a href="tel:(210-849-3350)" class="phone-cta" aria-label="Call us at (210) 849-3350">
+    <a href="tel:+12108493350" class="phone-cta" aria-label="Call us at (210) 849-3350">
       (210) 849-3350
     </a>
     <div class="cta-actions">
@@ -2749,6 +2265,30 @@
   </div>
 </section>
 
+<section class="elara-partner" id="elara">
+  <div class="container">
+    <div class="elara-box">
+      <div>
+        <div class="elara-kicker">ELARA PILOT PARTNER • FIELD OPERATIONS</div>
+        <h2>WOULD YOU LIKE TO KNOW MORE?</h2>
+        <p>Texas Patriot Land Services is a real-world ELARA pilot environment. Customers get a simpler path from questions and project photos to an estimate request, while the crew can carry approved information into ELARA Field Commander for field operations.</p>
+        <div class="powered-elara">Powered by ELARA™ • Business intelligence by <a href="https://neuromusehq.com/#demo" target="_blank" rel="noopener" style="color:#00ffee">NeuroMuse Technologies ↗</a></div>
+      </div>
+      <div class="elara-actions">
+        <a class="elara-action" href="#booking"><strong>ASK ELARA</strong> about a land project →</a>
+        <a class="elara-action" href="#booking">Describe the property, acreage and work needed →</a>
+        <a class="elara-action" href="#services">Explore land services →</a>
+        <a class="elara-action" href="https://neuromusehq.com/preview/elara/#demos" target="_blank" rel="noopener">See ELARA in action →</a>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:24px;border:1px solid rgba(244,166,36,.28);background:rgba(13,13,13,.72)">
+      <div class="section-label">Field Commander Workflow</div>
+      <h3 style="font-family:var(--font-heading);font-size:26px;color:var(--white);margin-bottom:12px">FROM PROPERTY QUESTION TO FIELD RECORD</h3>
+      <p style="color:var(--dust);line-height:1.7">Customer details, acreage, project notes and photos can feed an approved workflow for estimates, measurements, job documentation and daily reporting. ELARA helps organize the work; Ernest remains in command of the job and customer decisions.</p>
+      <div style="margin-top:16px;font-family:var(--font-heading);letter-spacing:.12em;color:var(--amber-glow)">INQUIRY → PROJECT CONTEXT → FIELD WORK → REPORT → HUMAN APPROVAL</div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ============================================================
@@ -2760,7 +2300,7 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <a href="#" class="nav-logo" aria-label="Texas Patriot Land Services Home">
+        <a href="#main" class="nav-logo" aria-label="Texas Patriot Land Services Home">
           <div class="logo-icon">🤠</div>
           <div class="logo-text">
             <span class="name">TEXAS PATRIOT</span>
@@ -2773,10 +2313,10 @@
       <nav class="footer-col" aria-label="Services links">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Brush Hogging</a></li>
-          <li><a href="#services">Pasture Shredding</a></li>
-          <li><a href="#services">Ranch Maintenance</a></li>
-          <li><a href="#services">Fence Line Clearing</a></li>
+          <li><a href="#services">Acreage Mowing</a></li>
+          <li><a href="#services">Pasture & Field Mowing</a></li>
+          <li><a href="#services">Property Maintenance</a></li>
+          <li><a href="#services">Fence-Line Mowing</a></li>
           <li><a href="#services">Small Acreage</a></li>
         </ul>
       </nav>
@@ -2785,33 +2325,29 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#growth">Our Growth Plan</a></li>
           <li><a href="#booking">Contact</a></li>
-          <li><a href="#">Service Area</a></li>
-          <li><a href="#">Veteran Programs</a></li>
+          <li><a href="#booking">Service Area</a></li>
+          <li><a href="#about">Veteran-Owned</a></li>
         </ul>
       </nav>
 
       <nav class="footer-col" aria-label="Contact information">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+15125550178">(210) 210-849-3350</a></li>
-          <li><a href="mailto:netoguerreroeg@gmail.com</a></li>
-          <li><a href="#">San Antonio, Texas Area</a></li>
-          <li><a href="#">Monday–Saturday</a></li>
-          <li><a href="#">7AM – 7PM CST</a></li>
+          <li><a href="tel:+12108493350">(210) 849-3350</a></li>
+          <li><a href="mailto:netoguerrero.eg@gmail.com">netoguerrero.eg@gmail.com</a></li>
+          <li><span>San Antonio, Texas Area</span></li>
+          <li><span>Call or text to discuss scheduling</span></li>
         </ul>
       </nav>
 
     </div>
 
     <div class="footer-bottom">
-      <p>© 2024 Texas Patriot Land Services · All Rights Reserved · San Antonio, Texas</p>
+      <p>© 2026 Texas Patriot Land Services · All Rights Reserved · San Antonio, Texas</p>
       <div class="badges" role="list" aria-label="Business credentials">
         <span class="footer-badge" role="listitem">🇺🇸 Veteran-Owned</span>
-        <span class="footer-badge" role="listitem">🛡️ Licensed &amp; Insured</span>
-        <span class="footer-badge" role="listitem">📋 SAM.gov Registered</span>
-        <span class="footer-badge" role="listitem">Texas LLC</span>
+        <span class="footer-badge" role="listitem">ELARA Pilot Partner</span>
       </div>
     </div>
 
@@ -2820,7 +2356,7 @@
 
 <!-- Mobile sticky CTA -->
 <div class="mobile-cta-bar" role="region" aria-label="Mobile contact options">
-  <a href="tel:+15125550178" aria-label="Call Texas Patriot Land Services">📞 Call Now</a>
+  <a href="tel:+12108493350" aria-label="Call Texas Patriot Land Services">📞 Call Now</a>
   <a href="#booking" aria-label="Request a free quote">Get Free Quote</a>
 </div>
 
@@ -2865,17 +2401,23 @@
       return;
     }
 
-    const btn = document.querySelector('.form-submit');
-    btn.textContent = '✅ Quote Request Sent!';
-    btn.style.background = 'var(--army-green)';
-    btn.disabled = true;
+    const last = document.getElementById('last-name').value.trim();
+    const county = document.getElementById('county').value;
+    const acreage = document.getElementById('acreage').value;
+    const details = document.getElementById('details').value.trim();
 
-    // Reset after 4s
-    setTimeout(() => {
-      btn.innerHTML = '🤠 Request My Free Quote';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 4000);
+    const subject = encodeURIComponent('Texas Patriot Land Services — Quote Request');
+    const body = encodeURIComponent(
+      'Name: ' + first + ' ' + last + '\n' +
+      'Phone: ' + phone + '\n' +
+      'County / Area: ' + county + '\n' +
+      'Service: ' + service + '\n' +
+      'Approx. Acreage: ' + acreage + '\n\n' +
+      'Project Details:\n' + details + '\n\n' +
+      'Submitted from the Texas Patriot Land Services website.'
+    );
+
+    window.location.href = 'mailto:netoguerrero.eg@gmail.com?subject=' + subject + '&body=' + body;
   }
 
   // ——————————————————————————————
