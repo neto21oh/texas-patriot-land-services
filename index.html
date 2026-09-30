@@ -1872,6 +1872,27 @@ body{background:#f1efe8!important;color:#222!important}
 .service-card p{color:#62675d!important}
 .service-icon.service-word{color:#76805e!important;border-bottom-color:#9b6b35!important}
 .service-tag{border-color:#b9ad96!important;color:#6f5a3f!important}
+
+/* Home-service redesign: warm, local, non-tech */
+:root{--font-display:Arial,sans-serif!important;--font-heading:Arial,sans-serif!important;--font-body:Arial,sans-serif!important;--orange:#8b6a3e!important}
+body{background:#f6f3eb!important;color:#293026!important;font-family:Arial,sans-serif!important}
+nav{background:#fff!important;border-bottom:1px solid #ddd8ca!important;box-shadow:0 2px 12px rgba(30,40,25,.08)!important}
+.nav-logo .name,.nav-logo .sub,.nav-links a,.nav-veteran-badge{color:#293026!important}
+.hero{background:#e9e5d8!important;min-height:660px!important}
+.hero-title,.hero-title *{font-family:Georgia,serif!important;letter-spacing:.01em!important;text-transform:none!important}
+.hero-title .texas{display:none!important}.hero-title .patriot{font-size:.72em!important;color:#fff!important}.hero-title .land-services{font-family:Arial,sans-serif!important;letter-spacing:.08em!important;color:#eee5d5!important}
+.hero-tagline{font-family:Arial,sans-serif!important;letter-spacing:.08em!important;color:#e7c27d!important}
+.capability-now{font-family:Arial,sans-serif!important;letter-spacing:.04em!important;background:rgba(255,255,255,.92)!important;color:#44543b!important;border:0!important;border-radius:999px!important;padding:10px 16px!important}
+.services{padding:78px 0!important;background:#f6f3eb!important}
+.services .section-title{font-family:Georgia,serif!important;text-transform:none!important;letter-spacing:0!important;font-size:clamp(38px,5vw,62px)!important;color:#2d3929!important}
+.services-grid{grid-template-columns:repeat(3,1fr)!important;gap:22px!important;background:transparent!important}
+.service-card,.service-card:nth-child(even){background:#fff!important;border:1px solid #ded9cb!important;border-radius:14px!important;padding:32px!important;min-height:300px!important;box-shadow:0 8px 24px rgba(45,55,38,.06)!important}
+.service-card h3{font-family:Georgia,serif!important;font-size:25px!important;color:#30402c!important;text-transform:none!important;letter-spacing:0!important}
+.service-card p{color:#666b61!important;font-size:16px!important}
+.service-icon.service-word{font-family:Arial,sans-serif!important;color:#657653!important;border:0!important;border-bottom:2px solid #9c7a48!important}
+.service-tag{font-family:Arial,sans-serif!important;text-transform:none!important;letter-spacing:0!important;border:0!important;background:#eef0e8!important;color:#59674f!important;border-radius:999px!important;padding:7px 10px!important}
+.elara-partner{background:#eef0e8!important;color:#293026!important}.elara-partner:after{display:none!important}.elara-kicker{color:#657653!important}.elara-box h2{font-family:Georgia,serif!important;text-transform:none!important}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
@@ -2009,9 +2030,7 @@ body{background:#f1efe8!important;color:#222!important}
 
     <header class="services-header reveal">
       <div class="section-label">What We Do</div>
-      <h2 class="section-title" id="services-heading">
-        Land Services<br><span class="accent">Done Right</span>
-      </h2>
+      <h2 class="section-title" id="services-heading">Yards, Small Fields & Property Care</h2>
       <p class="section-body">
         We bring military precision and Texas toughness to every job. Whether you need
         a one-time acreage mowing job or recurring property-maintenance schedule, Texas Patriot
@@ -2021,36 +2040,9 @@ body{background:#f1efe8!important;color:#222!important}
 
     <div class="services-grid">
 
-      <article class="service-card reveal">
-        <span class="service-icon service-word" aria-hidden="true">01</span>
-        <h3>Acreage Mowing</h3>
-        <p>Zero-turn mowing for grass and manageable overgrowth on properties where terrain, access, and conditions are appropriate for the equipment.</p>
-        <div class="service-detail">
-          <span class="service-tag">Small Acreage</span>
-          <span class="service-tag">Grass & Light Growth</span>
-          <span class="service-tag">Quote First</span>
-        </div>
-      </article>
-
-      <article class="service-card reveal">
-        <span class="service-icon service-word" aria-hidden="true">02</span>
-        <h3>Pasture & Field Mowing</h3>
-        <p>Keep fields and larger grassy areas maintained with zero-turn mowing where terrain and site conditions are appropriate.</p>
-        <div class="service-detail">
-          <span class="service-tag">Recurring Mowing</span>
-          <span class="service-tag">Grass Management</span>
-          <span class="service-tag">Field Upkeep</span>
-        </div>
-      </article>
-
-      <article class="service-card reveal">
-        <span class="service-icon service-word" aria-hidden="true">03</span>
-        <h3>Landscaping & Property Maintenance</h3>
-        <p>Landscaping and practical property upkeep for homes and small properties: mowing, edging, trimming, yard cleanup and routine exterior maintenance. Larger jobs are evaluated based on access, terrain and equipment needs.</p>
-        <div class="service-detail">
-          <span class="service-tag">Mowing</span><span class="service-tag">Edging & Trimming</span><span class="service-tag">Yard Cleanup</span>
-        </div>
-      </article>
+      <article class="service-card reveal"><span class="service-icon service-word" aria-hidden="true">YARD</span><h3>Residential Yard Mowing</h3><p>Regular mowing for neighborhood yards and larger residential lots, with edging and trimming available as part of the job.</p><div class="service-detail"><span class="service-tag">Yards</span><span class="service-tag">Mowing</span><span class="service-tag">Edging & Trimming</span></div></article>
+<article class="service-card reveal"><span class="service-icon service-word" aria-hidden="true">FIELD</span><h3>Small Field Mowing</h3><p>Zero-turn mowing for small fields, open grassy areas and manageable acreage where access and terrain are appropriate for the mower.</p><div class="service-detail"><span class="service-tag">Small Fields</span><span class="service-tag">Open Grass</span><span class="service-tag">Quote First</span></div></article>
+<article class="service-card reveal"><span class="service-icon service-word" aria-hidden="true">CARE</span><h3>Yard Cleanup & Property Care</h3><p>Practical outdoor upkeep including yard cleanup, grass management and recurring maintenance for homes and small properties.</p><div class="service-detail"><span class="service-tag">Yard Cleanup</span><span class="service-tag">Property Care</span><span class="service-tag">Recurring Service</span></div></article>
 
       <article class="service-card reveal">
         <span class="service-icon service-word" aria-hidden="true">04</span>
