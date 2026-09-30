@@ -17,6 +17,8 @@ form{background:#f6f5ef;padding:28px;border-radius:8px;display:grid;gap:12px}inp
 .elara{background:#263024;color:#fff;padding:28px 0}.elara .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}.elara h3{margin:0 0 6px;font-family:Georgia,serif;font-size:23px}.elara p{margin:0;color:#d7ded2;max-width:760px;line-height:1.5}.elara span{font-size:12px;letter-spacing:.12em;color:#bdc9b5}
 footer{padding:28px 0;background:#182016;color:#d6dbd2;font-size:14px}.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
 @media(max-width:780px){.links a:not(.call){display:none}.grid,.quote-grid{grid-template-columns:1fr}.hero{min-height:470px}.hero-copy{padding:55px 0}.elara .wrap{display:block}.elara span{display:block;margin-top:14px}}
+
+.photo-upload{display:grid;gap:6px;padding:15px;border:1px dashed #aeb5a7;border-radius:5px;background:#fff;color:#35432f}.photo-upload span{font-size:13px;color:#6c7368}.photo-upload input{padding:8px 0;border:0}.estimate-note{font-size:12px;line-height:1.5;color:#687064;background:#eef0e8;padding:12px;border-radius:4px}#formStatus{font-size:13px;color:#567047;line-height:1.45}
 </style></head>
 <body>
 <header><div class="wrap"><nav><div class="brand">TEXAS PATRIOT<small>LAND SERVICES</small></div><div class="links"><a href="#services">Services</a><a href="#quote">Get a Quote</a><a class="call" href="tel:+12108493350">Call / Text (210) 849-3350</a></div></nav></div></header>
@@ -28,10 +30,27 @@ footer{padding:28px 0;background:#182016;color:#d6dbd2;font-size:14px}.foot{disp
 <article class="card"><div class="photo p3"></div><div><h3>Cleanup & Property Care</h3><p>Yard cleanup, grass management and recurring outdoor upkeep for homes and small properties.</p></div></article>
 </div></div></section>
 <section class="quote" id="quote"><div class="wrap quote-grid"><div><div class="eyebrow">Get a Quote</div><h2>Tell Ernest about the property.</h2><p>Send the address or area, approximate size, what needs to be done and anything important about access or terrain. Ernest can review the job and follow up directly.</p><div class="facts"><div><strong>Phone:</strong> <a href="tel:+12108493350">(210) 849-3350</a></div><div><strong>Email:</strong> <a href="mailto:netoguerrero.eg@gmail.com">netoguerrero.eg@gmail.com</a></div><div><strong>Area:</strong> San Antonio, Texas area</div></div></div>
-<form onsubmit="sendQuote(event)"><input id="name" required placeholder="Your name"><input id="contact" required placeholder="Phone or email"><select id="type"><option>Yard mowing</option><option>Small field mowing</option><option>Cleanup / property care</option><option>Other — describe below</option></select><textarea id="details" required placeholder="Property size, location, access, terrain and what you need done"></textarea><button type="submit">Send Quote Request</button></form></div></section>
+<form id="quoteForm" onsubmit="sendQuote(event)">
+<input id="name" name="name" required placeholder="Your name">
+<input id="contact" name="contact" required placeholder="Phone or email">
+<input id="address" name="address" required placeholder="Property address or area">
+<select id="type" name="service"><option>Yard mowing</option><option>Small field mowing</option><option>Cleanup / property care</option><option>Other — describe below</option></select>
+<textarea id="details" name="details" required placeholder="Approximate size, access, terrain and what you need done"></textarea>
+<label class="photo-upload"><strong>Add property photos</strong><span>Photos help Ernest review the job. Up to 6 images.</span><input id="photos" name="photos" type="file" accept="image/*" multiple></label>
+<div class="estimate-note">Photos and details may later be reviewed by ELARA to prepare a rough estimate for Ernest. Ernest approves pricing and scheduling before anything is sent or booked.</div>
+<button type="submit">Prepare Quote Request</button><div id="formStatus" role="status" aria-live="polite"></div>
+</form></div></section>
 <section class="elara"><div class="wrap"><div><h3>Organized with ELARA™ Field Commander</h3><p>ELARA helps Ernest keep project notes, photos, measurements and job details organized. Technology supports the work; Ernest stays in command.</p></div><span>ELARA PILOT PARTNER · NEUROMUSE TECHNOLOGIES</span></div></section>
 </main>
 <footer><div class="wrap foot"><strong>Texas Patriot Land Services</strong><span>Veteran-owned · San Antonio, Texas area</span><span>© 2026 Texas Patriot Land Services</span></div></footer>
 <script>
-function sendQuote(e){e.preventDefault();const n=encodeURIComponent(document.getElementById('name').value),c=encodeURIComponent(document.getElementById('contact').value),t=encodeURIComponent(document.getElementById('type').value),d=encodeURIComponent(document.getElementById('details').value);location.href='mailto:netoguerrero.eg@gmail.com?subject=Texas%20Patriot%20Quote%20Request&body=Name:%20'+n+'%0AContact:%20'+c+'%0AService:%20'+t+'%0ADetails:%20'+d}
+function sendQuote(e){
+ e.preventDefault();
+ const files=document.getElementById('photos').files;
+ if(files.length>6){document.getElementById('formStatus').textContent='Please choose no more than 6 photos.';return}
+ const vals={name:document.getElementById('name').value,contact:document.getElementById('contact').value,address:document.getElementById('address').value,service:document.getElementById('type').value,details:document.getElementById('details').value};
+ const body='Name: '+vals.name+'\nContact: '+vals.contact+'\nProperty: '+vals.address+'\nService: '+vals.service+'\nDetails: '+vals.details+'\n\nPhotos selected: '+files.length+' (photo upload will activate with the secure intake endpoint).\n\nELARA STATUS: Intake only. Ernest approval required for pricing and scheduling.';
+ document.getElementById('formStatus').textContent='Opening your quote request. Please attach the selected property photos before sending.';
+ location.href='mailto:netoguerrero.eg@gmail.com?subject='+encodeURIComponent('Texas Patriot Quote Request — '+vals.service)+'&body='+encodeURIComponent(body)
+}
 </script></body></html>
