@@ -1806,6 +1806,28 @@
 .booking{background-image:radial-gradient(circle at 80% 20%,rgba(200,90,0,.14),transparent 28rem)}
 .elara-partner{position:relative;overflow:hidden}
 .elara-partner:after{content:"FIELD COMMANDER";position:absolute;right:-20px;bottom:-25px;font-family:var(--font-display);font-size:clamp(70px,12vw,180px);color:rgba(0,255,238,.025);pointer-events:none}
+
+  /* 2026 premium field-ops pass */
+  .hero{min-height:92svh;background:#0b0c0b}
+  .hero-sky{background:
+    radial-gradient(circle at 72% 28%,rgba(244,166,36,.28),transparent 24%),
+    linear-gradient(118deg,#070807 0%,#17120c 46%,#4d2609 72%,#0d0d0d 100%)}
+  .hero-ground{height:27%;opacity:.95}
+  .hero-content{max-width:760px}
+  .hero-title{font-size:clamp(64px,9vw,128px)}
+  .hero-desc{font-size:18px;max-width:620px;color:#d0c5b9}
+  .service-card{border:1px solid rgba(255,255,255,.055);min-height:270px}
+  .service-card:hover{transform:translateY(-4px);transition:.25s ease;background:#211d18}
+  .why-us{background:linear-gradient(135deg,#17120c,#0d0d0d 70%)}
+  .ops-panel{background:#0b0e0c;border:1px solid rgba(244,166,36,.35);box-shadow:0 30px 70px rgba(0,0,0,.35);overflow:hidden}
+  .ops-top{display:flex;justify-content:space-between;gap:12px;padding:15px 18px;background:#151713;border-bottom:1px solid rgba(244,166,36,.2);font-family:var(--font-heading);font-size:12px;letter-spacing:.14em;color:var(--amber-glow)}
+  .ops-live{color:#a9d18e}.ops-screen{padding:12px 18px}
+  .ops-line{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:var(--font-heading)}
+  .ops-line b{color:var(--burnt-orange);font-size:12px}.ops-line span{color:var(--cream);font-weight:600}.ops-line em{font-style:normal;font-size:10px;letter-spacing:.12em;color:var(--stone)}
+  .ops-note{padding:14px 18px;margin:0;color:var(--dust);font-size:12px}
+  .booking-form{box-shadow:0 30px 80px rgba(0,0,0,.28);border:1px solid rgba(244,166,36,.18)}
+  .elara-box{box-shadow:0 30px 80px rgba(0,0,0,.25)}
+  @media(max-width:768px){.nav-inner{height:auto;min-height:64px;flex-wrap:wrap;padding:10px 0}.hero{padding-top:130px}.hero-stats{position:relative;margin-top:42px}.hero{display:block;padding-bottom:0}.hero-content{padding-top:40px}.ops-line{grid-template-columns:28px 1fr}.ops-line em{grid-column:2}.metrics-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -2103,9 +2125,7 @@
         </div>
 
         <p class="section-body">
-          We served our country with honor. Now we serve Texas landowners with that same
-          commitment — showing up on time, doing the work right, and standing behind
-          every job we complete. No shortcuts. No excuses.
+          Veteran-owned land service built around clear communication, practical field work, and respect for the property. From the first conversation through job documentation, the goal is simple: understand the work and keep the owner informed.
         </p>
 
         <ul class="values-list">
@@ -2113,42 +2133,45 @@
             <div class="v-icon" aria-hidden="true">🎯</div>
             <div>
               <h4>Mission Focus</h4>
-              <p>Every job is a mission. We assess, plan, execute, and deliver with precision that comes from military discipline.</p>
+              <p>Each project starts with the property, the scope, access conditions, and the result the landowner is trying to achieve.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">🤝</div>
             <div>
               <h4>Your Word Is Your Bond</h4>
-              <p>We quote honestly, show up when we say we will, and communicate transparently about every aspect of your project.</p>
+              <p>Project details, expectations, and changes stay visible so the customer knows what is being discussed.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">⚙️</div>
             <div>
               <h4>Professional Equipment</h4>
-              <p>Commercial-grade tractors and implements, maintained and prepared for dependable field work. We come ready to work.</p>
+              <p>Equipment and job requirements are matched to the work being discussed before the project moves forward.</p>
             </div>
           </li>
           <li>
             <div class="v-icon" aria-hidden="true">📍</div>
             <div>
               <h4>Texas Through and Through</h4>
-              <p>Local knowledge, local investment. We understand Texas land, Texas weather, and Texas landowner expectations.</p>
+              <p>A Texas-focused operation built around landowners, acreage work, and practical property needs.</p>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="why-visual reveal">
-        <div class="quote-block">
-          <p class="quote-text">
-            "The discipline we carried in uniform, we carry into every field we work.
-            Your land deserves the same respect we gave our post."
-          </p>
-          <p class="quote-attr">— Owner, Texas Patriot Land Services · U.S. Army Veteran</p>
+        <div class="ops-panel">
+          <div class="ops-top"><span>ELARA™ FIELD COMMANDER</span><span class="ops-live">PILOT ACTIVE</span></div>
+          <div class="ops-screen">
+            <div class="ops-line"><b>01</b><span>Property inquiry</span><em>CAPTURE</em></div>
+            <div class="ops-line"><b>02</b><span>Photos + acreage + scope</span><em>ORGANIZE</em></div>
+            <div class="ops-line"><b>03</b><span>Estimate preparation</span><em>REVIEW</em></div>
+            <div class="ops-line"><b>04</b><span>Field notes + measurements</span><em>DOCUMENT</em></div>
+            <div class="ops-line"><b>05</b><span>Daily report</span><em>APPROVE</em></div>
+          </div>
+          <p class="ops-note">Technology supports the work. Ernest stays in command.</p>
         </div>
-
         <div class="metrics-row">
           <div class="metric-box"><div class="metric-num">LOCAL</div><div class="metric-label">Texas<br>Service</div></div>
           <div class="metric-box"><div class="metric-num">DIRECT</div><div class="metric-label">Quote<br>Requests</div></div>
