@@ -19,6 +19,8 @@ footer{padding:28px 0;background:#182016;color:#d6dbd2;font-size:14px}.foot{disp
 @media(max-width:780px){.links a:not(.call){display:none}.grid,.quote-grid{grid-template-columns:1fr}.hero{min-height:470px}.hero-copy{padding:55px 0}.elara .wrap{display:block}.elara span{display:block;margin-top:14px}}
 
 .photo-upload{display:grid;gap:6px;padding:15px;border:1px dashed #aeb5a7;border-radius:5px;background:#fff;color:#35432f}.photo-upload span{font-size:13px;color:#6c7368}.photo-upload input{padding:8px 0;border:0}.estimate-note{font-size:12px;line-height:1.5;color:#687064;background:#eef0e8;padding:12px;border-radius:4px}#formStatus{font-size:13px;color:#567047;line-height:1.45}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.approval-flow{margin-top:22px;padding:18px 20px;background:#f6f5ef;border-left:4px solid #567047;border-radius:4px}.approval-flow strong{display:block;color:#35432f;margin-bottom:7px}.approval-flow span{font-size:13px;color:#697064;line-height:1.55}@media(max-width:600px){.two{grid-template-columns:1fr}}
 </style></head>
 <body>
 <header><div class="wrap"><nav><div class="brand">TEXAS PATRIOT<small>LAND SERVICES</small></div><div class="links"><a href="#services">Services</a><a href="#quote">Get a Quote</a><a class="call" href="tel:+12108493350">Call / Text (210) 849-3350</a></div></nav></div></header>
@@ -29,11 +31,11 @@ footer{padding:28px 0;background:#182016;color:#d6dbd2;font-size:14px}.foot{disp
 <article class="card"><div class="photo p2"></div><div><h3>Small Field Mowing</h3><p>Zero-turn mowing for open grassy areas and manageable small fields where access and terrain are appropriate.</p></div></article>
 <article class="card"><div class="photo p3"></div><div><h3>Cleanup & Property Care</h3><p>Yard cleanup, grass management and recurring outdoor upkeep for homes and small properties.</p></div></article>
 </div></div></section>
-<section class="quote" id="quote"><div class="wrap quote-grid"><div><div class="eyebrow">Get a Quote</div><h2>Tell Ernest about the property.</h2><p>Send the address or area, approximate size, what needs to be done and anything important about access or terrain. Ernest can review the job and follow up directly.</p><div class="facts"><div><strong>Phone:</strong> <a href="tel:+12108493350">(210) 849-3350</a></div><div><strong>Email:</strong> <a href="mailto:netoguerrero.eg@gmail.com">netoguerrero.eg@gmail.com</a></div><div><strong>Area:</strong> San Antonio, Texas area</div></div></div>
+<section class="quote" id="quote"><div class="wrap quote-grid"><div><div class="eyebrow">Get a Quote</div><h2>Tell Ernest about the property.</h2><p>Send the address or area, approximate size, what needs to be done and anything important about access or terrain. Ernest can review the job and follow up directly.</p><div class="approval-flow"><strong>How your request works</strong><span>Send details + photos → ELARA organizes the request → Ernest reviews the job and rough estimate → you receive approved pricing and scheduling options.</span></div><div class="facts"><div><strong>Phone:</strong> <a href="tel:+12108493350">(210) 849-3350</a></div><div><strong>Email:</strong> <a href="mailto:netoguerrero.eg@gmail.com">netoguerrero.eg@gmail.com</a></div><div><strong>Area:</strong> San Antonio, Texas area</div></div></div>
 <form id="quoteForm" onsubmit="sendQuote(event)">
 <input id="name" name="name" required placeholder="Your name">
-<input id="contact" name="contact" required placeholder="Phone or email">
-<input id="address" name="address" required placeholder="Property address or area">
+<div class="two"><input id="phone" name="phone" required placeholder="Phone number"><input id="email" name="email" type="email" required placeholder="Email"></div>
+<input id="address" name="address" required placeholder="Property address or area"><div class="two"><input id="size" name="size" placeholder="Approx. yard / field size"><select id="frequency" name="frequency"><option>One-time service</option><option>Recurring service</option><option>Not sure yet</option></select></div>
 <select id="type" name="service"><option>Yard mowing</option><option>Small field mowing</option><option>Cleanup / property care</option><option>Other — describe below</option></select>
 <textarea id="details" name="details" required placeholder="Approximate size, access, terrain and what you need done"></textarea>
 <label class="photo-upload"><strong>Add property photos</strong><span>Photos help Ernest review the job. Up to 6 images.</span><input id="photos" name="photos" type="file" accept="image/*" multiple></label>
@@ -48,9 +50,9 @@ function sendQuote(e){
  e.preventDefault();
  const files=document.getElementById('photos').files;
  if(files.length>6){document.getElementById('formStatus').textContent='Please choose no more than 6 photos.';return}
- const vals={name:document.getElementById('name').value,contact:document.getElementById('contact').value,address:document.getElementById('address').value,service:document.getElementById('type').value,details:document.getElementById('details').value};
- const body='Name: '+vals.name+'\nContact: '+vals.contact+'\nProperty: '+vals.address+'\nService: '+vals.service+'\nDetails: '+vals.details+'\n\nPhotos selected: '+files.length+' (photo upload will activate with the secure intake endpoint).\n\nELARA STATUS: Intake only. Ernest approval required for pricing and scheduling.';
+ const vals={name:document.getElementById('name').value,phone:document.getElementById('phone').value,email:document.getElementById('email').value,address:document.getElementById('address').value,size:document.getElementById('size').value,frequency:document.getElementById('frequency').value,service:document.getElementById('type').value,details:document.getElementById('details').value};
+ const lead='TPL-'+Date.now().toString().slice(-7);const body='LEAD: '+lead+'\nName: '+vals.name+'\nPhone: '+vals.phone+'\nEmail: '+vals.email+'\nProperty: '+vals.address+'\nApprox. size: '+vals.size+'\nService: '+vals.service+'\nFrequency: '+vals.frequency+'\nDetails: '+vals.details+'\n\nPhotos selected: '+files.length+' (attach selected photos before sending).\n\nELARA REVIEW QUEUE\n1. Organize intake + photos\n2. Prepare rough range + assumptions\n3. Flag missing information / access concerns\n4. ERNEST APPROVAL REQUIRED\n5. Only after approval: customer estimate + scheduling.';
  document.getElementById('formStatus').textContent='Opening your quote request. Please attach the selected property photos before sending.';
- location.href='mailto:netoguerrero.eg@gmail.com?subject='+encodeURIComponent('Texas Patriot Quote Request — '+vals.service)+'&body='+encodeURIComponent(body)
+ location.href='mailto:netoguerrero.eg@gmail.com?subject='+encodeURIComponent('Texas Patriot Lead — '+lead+' — '+vals.service)+'&body='+encodeURIComponent(body)
 }
 </script></body></html>
