@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Texas Patriot Land Services | Built on Service. Powered by Texas.</title>
-<meta name="description" content="Veteran-owned land services in Texas. Brush hogging, pasture and field mowing, property maintenance, fence-line mowing. Serving rural Texas with pride and precision.">
-<meta name="keywords" content="acreage mowing Texas, pasture and field mowing, property maintenance, fence-line mowing, veteran owned land services, tractor services Texas">
+<meta name="description" content="Veteran-owned zero-turn mowing and property maintenance in Texas. Acreage mowing, field mowing and recurring property upkeep.">
+<meta name="keywords" content="zero turn mowing Texas, acreage mowing, field mowing, property maintenance, veteran owned lawn service Texas">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -282,20 +282,6 @@
       100% 100%, 0% 100%
     );
   }
-
-  /* Tractor silhouette SVG */
-  .hero-tractor {
-    position: absolute;
-    bottom: 17%;
-    right: clamp(40px, 8vw, 160px);
-    width: clamp(160px, 22vw, 340px);
-    opacity: 0;
-    animation: tractorRise 1.2s ease 0.8s forwards;
-    filter: drop-shadow(0 0 30px rgba(200,90,0,0.4));
-  }
-
-  @keyframes tractorRise {
-    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -1882,54 +1868,6 @@
   <div class="dust-particle" style="width:8px;height:8px;bottom:17%;right:40%;animation-duration:5s;animation-delay:0.8s;" aria-hidden="true"></div>
   <div class="dust-particle" style="width:3px;height:3px;bottom:20%;right:25%;animation-duration:7s;animation-delay:2s;" aria-hidden="true"></div>
 
-  <!-- SVG Tractor Silhouette -->
-  <svg class="hero-tractor" aria-hidden="true" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- Large rear wheel -->
-    <circle cx="100" cy="150" r="60" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
-    <circle cx="100" cy="150" r="45" fill="none" stroke="#1A0E00" stroke-width="2"/>
-    <circle cx="100" cy="150" r="12" fill="#1A0E00"/>
-    <!-- Wheel spokes -->
-    <line x1="100" y1="90" x2="100" y2="110" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="100" y1="190" x2="100" y2="210" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="40" y1="150" x2="60" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="140" y1="150" x2="160" y2="150" stroke="#1A0E00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="58" y1="108" x2="73" y2="123" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="127" y1="177" x2="142" y2="192" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="58" y1="192" x2="73" y2="177" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="127" y1="123" x2="142" y2="108" stroke="#1A0E00" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Small front wheel -->
-    <circle cx="265" cy="163" r="28" fill="#0D0D0D" stroke="#2C1800" stroke-width="3"/>
-    <circle cx="265" cy="163" r="20" fill="none" stroke="#1A0E00" stroke-width="1.5"/>
-    <circle cx="265" cy="163" r="7" fill="#1A0E00"/>
-    <!-- Body -->
-    <path d="M160 150 L160 90 L220 80 L260 85 L270 130 L160 150Z" fill="#0D0D0D"/>
-    <!-- Hood -->
-    <path d="M160 110 L220 95 L260 100 L260 130 L160 130Z" fill="#1A0E00"/>
-    <!-- Engine grill lines -->
-    <line x1="175" y1="100" x2="175" y2="128" stroke="#2C1800" stroke-width="2"/>
-    <line x1="190" y1="97" x2="190" y2="127" stroke="#2C1800" stroke-width="2"/>
-    <line x1="205" y1="95" x2="205" y2="126" stroke="#2C1800" stroke-width="2"/>
-    <!-- Exhaust stack -->
-    <rect x="218" y="65" width="8" height="30" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="1.5"/>
-    <!-- Cab -->
-    <rect x="130" y="85" width="70" height="65" rx="3" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
-    <!-- Cab window -->
-    <rect x="140" y="93" width="50" height="35" rx="2" fill="rgba(180,100,0,0.15)" stroke="#2C1800" stroke-width="1"/>
-    <!-- ROPS bar -->
-    <path d="M130 85 L130 55 L200 55 L200 85" fill="none" stroke="#2C1800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Ground shadow / dust -->
-    <ellipse cx="180" cy="196" rx="100" ry="8" fill="rgba(200,90,0,0.12)"/>
-    <!-- Brush hog attachment -->
-    <rect x="60" y="160" width="100" height="20" rx="2" fill="#0D0D0D" stroke="#2C1800" stroke-width="2"/>
-    <line x1="80" y1="160" x2="80" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="100" y1="160" x2="100" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="120" y1="160" x2="120" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <line x1="140" y1="160" x2="140" y2="180" stroke="#2C1800" stroke-width="1.5"/>
-    <!-- Smoke puffs -->
-    <circle cx="222" cy="56" r="6" fill="rgba(200,140,80,0.2)"/>
-    <circle cx="218" cy="44" r="8" fill="rgba(200,140,80,0.15)"/>
-    <circle cx="225" cy="33" r="5" fill="rgba(200,140,80,0.1)"/>
-  </svg>
 
   <div class="hero-ground" aria-hidden="true"></div>
 
@@ -2022,7 +1960,7 @@
       </h2>
       <p class="section-body">
         We bring military precision and Texas toughness to every job. Whether you need
-        a single pasture shredded or an ongoing ranch management contract, Texas Patriot
+        a one-time acreage mowing job or recurring property-maintenance schedule, Texas Patriot
         Land Services delivers consistent, quality work — on time and on budget.
       </p>
     </header>
@@ -2043,7 +1981,7 @@
       <article class="service-card reveal">
         <span class="service-icon" aria-hidden="true">🚜</span>
         <h3>Pasture & Field Mowing</h3>
-        <p>Keep your grazing land healthy and productive. Shredding controls weeds, manages growth stages, and maintains optimal forage conditions for livestock.</p>
+        <p>Keep fields and larger grassy areas maintained with zero-turn mowing where terrain and site conditions are appropriate.</p>
         <div class="service-detail">
           <span class="service-tag">Routine Contracts</span>
           <span class="service-tag">Weed Control</span>
